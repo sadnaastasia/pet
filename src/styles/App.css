@@ -1,0 +1,61 @@
+.running-line {
+  font-size: x-small;
+  font-weight: 300;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(251, 239, 241);
+}
+.running-line .running-line_minor {
+  width: 180px;
+  padding: 20px;
+  margin: 0;
+}
+.running-line hr {
+  border: none;
+  background-color: #333333;
+  width: 1px;
+  height: 30px;
+  margin: 0 auto;
+}
+.running-line .marquee {
+  width: 300%;
+  overflow: hidden;
+}
+.running-line .marquee .track {
+  width: 600%;
+  display: flex;
+  align-items: center;
+  animation: marquee 200s linear infinite forwards;
+}
+.running-line .marquee .track .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 33.33%;
+  padding: 5px;
+  list-style: none;
+}
+.running-line .marquee .track .content .content_element {
+  display: flex;
+  align-items: center;
+}
+.running-line .marquee .track .content .content_element .content_element_pic {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.running-line .marquee .track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.6%);
+  }
+}/*# sourceMappingURL=App.css.map */
