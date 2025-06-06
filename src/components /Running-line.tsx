@@ -1,4 +1,4 @@
-import runningLineArray from '../data/Running-line_data';
+import { runningLineArray } from '../data/data';
 import { useMemo } from 'react';
 
 function RunningLine() {
