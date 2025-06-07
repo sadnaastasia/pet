@@ -1,5 +1,6 @@
 import { IoMenu } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
+import { IoIosArrowForward } from 'react-icons/io';
 import { useState } from 'react';
 
 function Navigation() {
@@ -24,16 +25,19 @@ function Navigation() {
             <IoClose onClick={toggleMenu} />
           </button>
         </div>
-        <p>Explore</p>
-        <div>
-          <p>Our school</p>
-        </div>
-        <div>
-          <p>Our teachers</p>
-        </div>
-        <div>
-          <p>Our services</p>
-        </div>
+        <p className="side-menu_explore">Explore</p>
+        <button className="side-menu_button">
+          <p className="side-menu_elem">Our school</p>
+          <IoIosArrowForward />
+        </button>
+        <button className="side-menu_button">
+          <p className="side-menu_elem">Our teachers</p>
+          <IoIosArrowForward />
+        </button>
+        <button className="side-menu_button">
+          <p className="side-menu_elem">Our services</p>
+          <IoIosArrowForward />
+        </button>
       </div>
     </nav>
   );

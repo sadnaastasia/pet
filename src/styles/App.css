@@ -122,6 +122,7 @@
   padding-right: 30px;
 }
 .nav .side-menu .side-menu_nav {
+  padding-left: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,6 +141,32 @@
   height: 2rem;
 }
 .nav .side-menu .side-menu_nav .side-menu_button:hover {
+  cursor: pointer;
+  background-color: rgb(223, 223, 223);
+}
+.nav .side-menu .side-menu_explore {
+  padding: 20px;
+  font-size: small;
+  font-weight: 400;
+  color: rgb(180, 178, 178);
+}
+.nav .side-menu .side-menu_button {
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 5px 10px;
+}
+.nav .side-menu .side-menu_button .side-menu_elem {
+  padding: 0px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.nav .side-menu .side-menu_button:hover {
   cursor: pointer;
   background-color: rgb(223, 223, 223);
 }
@@ -261,6 +288,18 @@
   }
   .running-line .marquee .track {
     width: 1200%;
+  }
+  .nav .side-menu {
+    padding: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    border-radius: 0;
+  }
+  .nav .open {
+    visibility: visible;
+    right: 0%;
   }
   .beckoningInfo .verticalMarquee {
     font-size: 2rem;
