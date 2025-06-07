@@ -118,11 +118,9 @@
   background-color: #ffffff;
   transition-duration: 0.25s;
   border-radius: 30px 0px 0px 30px;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 .nav .side-menu .side-menu_nav {
-  padding-left: 20px;
+  padding: 10px 10px 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,9 +157,9 @@
   border: none;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 5px 10px;
+  padding: 5px 20px 5px 20px;
 }
-.nav .side-menu .side-menu_button .side-menu_elem {
+.nav .side-menu .side-menu_button pad .side-menu_elem {
   padding: 0px 20px;
   margin-top: 10px;
   margin-bottom: 10px;
