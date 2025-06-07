@@ -63,11 +63,13 @@
 .nav {
   position: sticky;
   top: 0;
+  z-index: 1;
   height: 40px;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   font-size: x-large;
+  background-color: white;
   .nav_buttons {
     display: flex;
     align-items: center;
@@ -109,6 +111,7 @@
     height: 7rem;
     overflow: hidden;
     .verticalTrack {
+      padding-left: 50px;
       margin: 0;
       animation: vertical-scroll 10s steps(5, end) infinite;
       list-style: none;
@@ -130,7 +133,6 @@
     grid-gap: 3px;
     height: 20rem;
     .beckoningInfo_button {
-      background-image: url('../../public/cbt.jpg');
       opacity: 0.5;
       background-position: center center;
       padding: 0px 50px;
@@ -145,25 +147,163 @@
     .beckoningInfo_button:hover {
       opacity: 1;
       cursor: pointer;
-      background-image: none !important;
+    }
+    .beckoningInfo_button_red {
+      background-image: url(../../public/cbt.jpg);
+    }
+    .beckoningInfo_button_green {
+      background-image: url(../../public/hands.jpg);
+    }
+    .beckoningInfo_button_blue {
+      background-image: url(../../public/smile.jpg);
+    }
+    .beckoningInfo_button_yellow {
+      background-image: url(../../public/flower.jpg);
+    }
+    .beckoningInfo_button_violet {
+      background-image: url(../../public/listen.jpg);
+    }
+    .beckoningInfo_button_pink {
+      background-image: url(../../public/free.jpg);
     }
     .beckoningInfo_button_red:hover {
-      background: #eb8a8a;
+      background-image: none;
+      background: #f56464;
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(245, 100, 100, 1) 35%,
+        rgba(255, 218, 166, 1) 100%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(245, 100, 100, 1) 35%,
+        rgba(255, 218, 166, 1) 100%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(245, 100, 100, 1) 35%,
+        rgba(255, 218, 166, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#F56464",
+  endColorstr="#FFDAA6",
+  GradientType=1
+);
     }
     .beckoningInfo_button_green:hover {
       background: #9bbea2;
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(155, 190, 162, 1) 50%,
+        rgba(255, 207, 117, 1) 100%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(155, 190, 162, 1) 50%,
+        rgba(255, 207, 117, 1) 100%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(155, 190, 162, 1) 50%,
+        rgba(255, 207, 117, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#9BBEA2",
+  endColorstr="#FFCF75",
+  GradientType=1
+);
     }
     .beckoningInfo_button_blue:hover {
-      background-color: #7da6b6;
+      background: #dbb2cb;
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(219, 178, 203, 1) 36%,
+        rgba(125, 166, 182, 1) 76%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(219, 178, 203, 1) 36%,
+        rgba(125, 166, 182, 1) 76%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(219, 178, 203, 1) 36%,
+        rgba(125, 166, 182, 1) 76%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#DBB2CB",
+  endColorstr="#7DA6B6",
+  GradientType=1
+);
     }
     .beckoningInfo_button_yellow:hover {
-      background: #ddd39f;
+      background: #63d0ff;
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(99, 208, 255, 1) 0%,
+        rgba(255, 237, 122, 1) 100%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(99, 208, 255, 1) 0%,
+        rgba(255, 237, 122, 1) 100%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(99, 208, 255, 1) 0%,
+        rgba(255, 237, 122, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#63D0FF",
+  endColorstr="#FFED7A",
+  GradientType=1
+);
     }
     .beckoningInfo_button_violet:hover {
-      background: #d0b9e0;
+      background: #b67da2;
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(182, 125, 162, 1) 50%,
+        rgba(255, 207, 117, 1) 100%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(182, 125, 162, 1) 50%,
+        rgba(255, 207, 117, 1) 100%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(182, 125, 162, 1) 50%,
+        rgba(255, 207, 117, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#B67DA2",
+  endColorstr="#FFCF75",
+  GradientType=1
+);
     }
     .beckoningInfo_button_pink:hover {
-      background: #dcb1d4;
+      background: #b8c8e6;
+      background: -webkit-linear-gradient(
+        90deg,
+        rgba(184, 200, 230, 1) 36%,
+        rgba(220, 177, 212, 1) 71%
+      );
+      background: -moz-linear-gradient(
+        90deg,
+        rgba(184, 200, 230, 1) 36%,
+        rgba(220, 177, 212, 1) 71%
+      );
+      background: linear-gradient(
+        90deg,
+        rgba(184, 200, 230, 1) 36%,
+        rgba(220, 177, 212, 1) 71%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#B8C8E6",
+  endColorstr="#DCB1D4",
+  GradientType=1
+);
     }
   }
 }
@@ -174,5 +314,44 @@
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+
+@media (max-width: 1000px) {
+  .running-line {
+    font-size: xx-small;
+    hr {
+      height: 25px;
+    }
+    .marquee {
+      width: 900%;
+      .track {
+        width: 1200%;
+      }
+    }
+  }
+  .beckoningInfo {
+    .verticalMarquee {
+      font-size: 2rem;
+      height: 3rem;
+      .verticalTrack {
+        padding-left: 40px;
+      }
+    }
+    .blockWithMarquee_mediumText {
+      padding-left: 40px;
+      font-size: 2rem;
+    }
+    .blockWithMarquee_smallText {
+      font-size: 1.5rem;
+      padding-left: 40px;
+    }
+    .beckoningInfo_moreInfo {
+      padding: 30px 40px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 3px;
+      height: 30rem;
+    }
   }
 }

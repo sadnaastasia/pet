@@ -48,37 +48,31 @@ export const beckoningInfo_button = [
   {
     id: 1,
     title: 'What is cognitive behavioral therapy?',
-    style: 'url(../../public/cbt.jpg)',
     class: 'beckoningInfo_button beckoningInfo_button_red',
   },
   {
     id: 2,
     title: 'Cognitive model',
-    style: 'url(../../public/hands.jpg)',
     class: 'beckoningInfo_button beckoningInfo_button_green',
   },
   {
     id: 3,
     title: 'Clinical Significance',
-    style: 'url(../../public/smile.jpg)',
     class: 'beckoningInfo_button beckoningInfo_button_blue',
   },
   {
     id: 4,
     title: 'How does CBT works?',
-    style: 'url(../../public/flower.jpg)',
     class: 'beckoningInfo_button beckoningInfo_button_yellow',
   },
   {
     id: 5,
     title: 'What techniques are used in CBT?',
-    style: 'url(../../public/listen.jpg)',
     class: 'beckoningInfo_button beckoningInfo_button_violet',
   },
   {
     id: 6,
     title: 'Who suits CBT?',
-    style: 'url(../../public/free.jpg)',
     class: 'beckoningInfo_button beckoningInfo_button_pink',
   },
 ];

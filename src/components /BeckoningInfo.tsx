@@ -18,11 +18,7 @@ function BeckoningInfo() {
       </div>
       <div className="beckoningInfo_moreInfo">
         {beckoningInfo_button.map((elem) => (
-          <button
-            className={elem.class}
-            key={elem.id}
-            style={{ backgroundImage: elem.style }}
-          >
+          <button className={elem.class} key={elem.id}>
             {elem.title}
           </button>
         ))}
