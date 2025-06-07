@@ -76,3 +76,18 @@ export const beckoningInfo_button = [
     class: 'beckoningInfo_button beckoningInfo_button_pink',
   },
 ];
+
+export const sideMenu_button = [
+  {
+    id: 1,
+    title: 'Our school',
+  },
+  {
+    id: 2,
+    title: 'Our teachers',
+  },
+  {
+    id: 3,
+    title: 'Our services',
+  },
+];
