@@ -181,12 +181,12 @@
   opacity: 1;
   background-color: #ffffff;
   transition-duration: 0.25s;
-  padding: 0px 20px 0px 20px;
 }
 .nav .logIn .logIn_nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 20px 0px 20px;
 }
 .nav .logIn .logIn_button {
   display: flex;
