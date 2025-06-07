@@ -104,6 +104,49 @@
   cursor: pointer;
   background-color: rgb(223, 223, 223);
 }
+.nav .side-menu {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  opacity: 1;
+  background-color: #ffffff;
+  transition-duration: 0.25s;
+  border-radius: 30px 0px 0px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.nav .side-menu .side-menu_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .side-menu .side-menu_nav .side-menu_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+}
+.nav .side-menu .side-menu_nav .side-menu_button svg {
+  width: 2rem;
+  height: 2rem;
+}
+.nav .side-menu .side-menu_nav .side-menu_button:hover {
+  cursor: pointer;
+  background-color: rgb(223, 223, 223);
+}
+.nav .open {
+  visibility: visible;
+  right: 0;
+}
 
 .beckoningInfo .verticalMarquee {
   font-size: 5rem;
