@@ -1,3 +1,8 @@
+$mainpink: rgb(251, 239, 241);
+$pink: #c776a8;
+$red: rgb(199, 4, 4);
+$greyhover: rgb(223, 223, 223);
+
 .running-line {
   font-size: x-small;
   font-weight: 300;
@@ -5,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(251, 239, 241);
+  background-color: $mainpink;
   .running-line_minor {
     width: 180px;
     padding: 20px;
@@ -84,7 +89,7 @@
     }
     .nav_logIn:hover {
       cursor: pointer;
-      background-color: rgb(223, 223, 223);
+      background-color: $greyhover;
     }
     .nav_menu {
       display: flex;
@@ -101,7 +106,7 @@
     }
     .nav_menu:hover {
       cursor: pointer;
-      background-color: rgb(223, 223, 223);
+      background-color: $greyhover;
     }
   }
   .side-menu {
@@ -115,7 +120,7 @@
     width: 400px;
     height: 100vh;
     opacity: 1;
-    background-color: #ffffff;
+    background-color: white;
     transition-duration: 0.25s;
     border-radius: 30px 0px 0px 30px;
     .side-menu_nav {
@@ -138,7 +143,7 @@
       }
       .side-menu_button:hover {
         cursor: pointer;
-        background-color: rgb(223, 223, 223);
+        background-color: $greyhover;
       }
     }
     .side-menu_explore {
@@ -155,7 +160,7 @@
       align-items: center;
       border: none;
       border-radius: 10px;
-      background-color: #ffffff;
+      background-color: white;
       padding: 5px 20px 5px 20px;
       pad .side-menu_elem {
         padding: 0px 20px;
@@ -165,7 +170,7 @@
     }
     .side-menu_button:hover {
       cursor: pointer;
-      background-color: rgb(223, 223, 223);
+      background-color: $greyhover;
     }
   }
   .logIn {
@@ -179,7 +184,7 @@
     width: 550px;
     height: 100vh;
     opacity: 1;
-    background-color: #ffffff;
+    background-color: white;
     transition-duration: 0.25s;
     .logIn_nav {
       display: flex;
@@ -202,10 +207,11 @@
     }
     .logIn_button:hover {
       cursor: pointer;
-      background-color: rgb(223, 223, 223);
+      background-color: $greyhover;
     }
     .logIn_title {
       font-size: larger;
+      margin-bottom: 10px;
     }
     .logIn_main {
       padding: 0px 120px 0px 120px;
@@ -213,49 +219,70 @@
       flex-direction: column;
       justify-content: center;
       align-items: stretch;
+      .main_welcome {
+        margin-bottom: 10px;
+      }
       .logIn-item {
         display: inline-block;
         vertical-align: top;
         position: relative;
-        margin-top: 20px;
-      }
+        margin-top: 10px;
 
-      .logIn-input {
-        box-sizing: border-box;
-        width: 100%;
-        height: 40px;
-        padding: 30px 15px;
-        border-radius: 10px;
-        border: #333333 1px solid;
-      }
-      .logIn-label {
-        font-size: medium;
-        font-weight: 300;
-        color: #9b9b9b;
-        position: absolute;
-        left: 15px;
-        top: 10px;
-        line-height: 40px;
-        transition: 0.3s;
-      }
-      .logIn-label_filled {
-        font-size: medium;
-        font-weight: 300;
-        color: #9b9b9b;
-        position: absolute;
-        left: 15px;
-        top: 5px;
-        line-height: 40px;
-        transition: 0.3s;
-        top: -8px;
-        font-size: 10px;
-        font-size: x-small;
-      }
-      .logIn-input:focus ~ .logIn-label,
-      .logIn-input:not(:focus):valid ~ .logIn-label {
-        top: -8px;
-        font-size: 10px;
-        font-size: x-small;
+        .logIn-input {
+          box-sizing: border-box;
+          width: 100%;
+          height: 40px;
+          padding: 30px 15px;
+          border-radius: 10px;
+          border: #333333 1px solid;
+        }
+        .logIn-input_error {
+          border-color: $red;
+        }
+        .logIn-label {
+          font-size: medium;
+          font-weight: 300;
+          color: #9b9b9b;
+          position: absolute;
+          left: 15px;
+          top: 10px;
+          line-height: 40px;
+          transition: 0.3s;
+        }
+        .logIn-label_filled {
+          font-size: medium;
+          font-weight: 300;
+          color: #9b9b9b;
+          position: absolute;
+          left: 15px;
+          top: 5px;
+          line-height: 40px;
+          transition: 0.3s;
+          top: -8px;
+          font-size: 10px;
+          font-size: x-small;
+        }
+        .logIn-label_error {
+          color: $red;
+        }
+        .logIn-input:focus ~ .logIn-label,
+        .logIn-input:not(:focus):valid ~ .logIn-label {
+          top: -8px;
+          font-size: 10px;
+          font-size: x-small;
+        }
+        .errorMessage {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding-left: 5px;
+          font-size: x-small;
+          font-weight: 300;
+          color: $red;
+          span {
+            margin-left: 2px;
+          }
+        }
       }
       .logIn_resetPassword {
         margin-top: 5px;
@@ -267,13 +294,14 @@
         font-size: small;
         font-weight: 400;
         background-color: #ffffff;
-        color: #c776a8;
+        color: $pink;
         padding: 0;
         margin: 0;
         border: none;
+        border-bottom: white 1px solid;
       }
       .logIn_pinkButton:hover {
-        border-bottom: #333333 1px solid;
+        border-bottom: $pink 1px solid;
         cursor: pointer;
       }
       .logIn_blackButton {

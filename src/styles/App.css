@@ -115,7 +115,7 @@
   width: 400px;
   height: 100vh;
   opacity: 1;
-  background-color: #ffffff;
+  background-color: white;
   transition-duration: 0.25s;
   border-radius: 30px 0px 0px 30px;
 }
@@ -156,7 +156,7 @@
   align-items: center;
   border: none;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: white;
   padding: 5px 20px 5px 20px;
 }
 .nav .side-menu .side-menu_button pad .side-menu_elem {
@@ -179,7 +179,7 @@
   width: 550px;
   height: 100vh;
   opacity: 1;
-  background-color: #ffffff;
+  background-color: white;
   transition-duration: 0.25s;
 }
 .nav .logIn .logIn_nav {
@@ -207,6 +207,7 @@
 }
 .nav .logIn .logIn_title {
   font-size: larger;
+  margin-bottom: 10px;
 }
 .nav .logIn .logIn_main {
   padding: 0px 120px 0px 120px;
@@ -215,13 +216,16 @@
   justify-content: center;
   align-items: stretch;
 }
+.nav .logIn .logIn_main .main_welcome {
+  margin-bottom: 10px;
+}
 .nav .logIn .logIn_main .logIn-item {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-.nav .logIn .logIn_main .logIn-input {
+.nav .logIn .logIn_main .logIn-item .logIn-input {
   box-sizing: border-box;
   width: 100%;
   height: 40px;
@@ -229,7 +233,10 @@
   border-radius: 10px;
   border: #333333 1px solid;
 }
-.nav .logIn .logIn_main .logIn-label {
+.nav .logIn .logIn_main .logIn-item .logIn-input_error {
+  border-color: rgb(199, 4, 4);
+}
+.nav .logIn .logIn_main .logIn-item .logIn-label {
   font-size: medium;
   font-weight: 300;
   color: #9b9b9b;
@@ -239,7 +246,7 @@
   line-height: 40px;
   transition: 0.3s;
 }
-.nav .logIn .logIn_main .logIn-label_filled {
+.nav .logIn .logIn_main .logIn-item .logIn-label_filled {
   font-size: medium;
   font-weight: 300;
   color: #9b9b9b;
@@ -252,11 +259,26 @@
   font-size: 10px;
   font-size: x-small;
 }
-.nav .logIn .logIn_main .logIn-input:focus ~ .logIn-label,
-.nav .logIn .logIn_main .logIn-input:not(:focus):valid ~ .logIn-label {
+.nav .logIn .logIn_main .logIn-item .logIn-label_error {
+  color: rgb(199, 4, 4);
+}
+.nav .logIn .logIn_main .logIn-item .logIn-input:focus ~ .logIn-label,
+.nav .logIn .logIn_main .logIn-item .logIn-input:not(:focus):valid ~ .logIn-label {
   top: -8px;
   font-size: 10px;
   font-size: x-small;
+}
+.nav .logIn .logIn_main .logIn-item .errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 5px;
+  font-size: x-small;
+  font-weight: 300;
+  color: rgb(199, 4, 4);
+}
+.nav .logIn .logIn_main .logIn-item .errorMessage span {
+  margin-left: 2px;
 }
 .nav .logIn .logIn_main .logIn_resetPassword {
   margin-top: 5px;
@@ -272,9 +294,10 @@
   padding: 0;
   margin: 0;
   border: none;
+  border-bottom: white 1px solid;
 }
 .nav .logIn .logIn_main .logIn_pinkButton:hover {
-  border-bottom: #333333 1px solid;
+  border-bottom: #c776a8 1px solid;
   cursor: pointer;
 }
 .nav .logIn .logIn_main .logIn_blackButton {
