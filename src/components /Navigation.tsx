@@ -3,6 +3,7 @@ import { IoClose } from 'react-icons/io5';
 import { IoIosArrowForward } from 'react-icons/io';
 import { useState } from 'react';
 import { sideMenu_button } from '../data/data';
+import Input from './Input';
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,8 +46,16 @@ function Navigation() {
           <button className="logIn_button">
             <IoClose onClick={toggleLogIn} />
           </button>
-          <h1>LogIn</h1>
+          <h1 className="logIn_title">LogIn</h1>
           <div></div>
+        </div>
+        <div className="logIn_main">
+          <h4 className="main_welcome">Welcome back</h4>
+          <Input type="email" text="Email" />
+          <Input type="password" text="Password" />
+          <div className="logIn_resetPassword">
+            <button className="logIn_resetButton">Forgot your password?</button>
+          </div>
         </div>
       </div>
     </nav>
