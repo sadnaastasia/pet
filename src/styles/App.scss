@@ -263,7 +263,7 @@
         justify-content: end;
         align-items: start;
       }
-      .logIn_resetButton {
+      .logIn_pinkButton {
         font-size: small;
         font-weight: 400;
         background-color: #ffffff;
@@ -272,9 +272,68 @@
         margin: 0;
         border: none;
       }
-      .logIn_resetButton:hover {
+      .logIn_pinkButton:hover {
         border-bottom: #333333 1px solid;
         cursor: pointer;
+      }
+      .logIn_blackButton {
+        height: 40px;
+        background-color: black;
+        color: #ffffff;
+        border-radius: 20px;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .logIn_blackButton:hover {
+        cursor: pointer;
+        background-color: rgb(71, 71, 71);
+      }
+      .logIn_line {
+        display: flex;
+        align-items: center;
+        font-size: small;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        hr {
+          height: 1px;
+          background-color: #cecece;
+          border: none;
+          width: 100%;
+        }
+      }
+      .logIn_whiteButton {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 40px;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        border: rgb(135, 135, 135) 1px solid;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+      .logIn_whiteButton:hover {
+        cursor: pointer;
+        border-color: black;
+      }
+      .logIn_create {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+        font-weight: 400;
+        span {
+          margin-right: 2px;
+        }
       }
     }
   }
@@ -549,6 +608,49 @@
       grid-template-rows: 1fr 1fr 1fr;
       grid-gap: 3px;
       height: 30rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .nav {
+    .logIn {
+      .logIn_main {
+        padding-left: 40px;
+        padding-right: 40px;
+        .logIn_whiteButton {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+  .beckoningInfo {
+    padding: 5px;
+    .verticalMarquee {
+      font-size: 1.5rem;
+      height: 2.5rem;
+      .verticalTrack {
+        padding-left: 20px;
+      }
+    }
+    .blockWithMarquee_mediumText {
+      padding-left: 20px;
+      font-size: 1.2rem;
+    }
+    .blockWithMarquee_smallText {
+      font-size: 1rem;
+      padding-left: 20px;
+    }
+    .beckoningInfo_moreInfo {
+      padding: 30px 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 3px;
+      height: 60rem;
+      .beckoningInfo_button {
+        padding: 0px 20px;
+      }
     }
   }
 }

@@ -4,6 +4,8 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { useState } from 'react';
 import { sideMenu_button } from '../data/data';
 import Input from './Input';
+import { FcGoogle } from 'react-icons/fc';
+import { SiApple } from 'react-icons/si';
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +48,7 @@ function Navigation() {
           <button className="logIn_button">
             <IoClose onClick={toggleLogIn} />
           </button>
-          <h1 className="logIn_title">LogIn</h1>
+          <h1 className="logIn_title">Login</h1>
           <div></div>
         </div>
         <div className="logIn_main">
@@ -54,7 +56,25 @@ function Navigation() {
           <Input type="email" text="Email" />
           <Input type="password" text="Password" />
           <div className="logIn_resetPassword">
-            <button className="logIn_resetButton">Forgot your password?</button>
+            <button className="logIn_pinkButton">Forgot your password?</button>
+          </div>
+          <button className="logIn_blackButton">Log in</button>
+          <div className="logIn_line">
+            <hr />
+            or
+            <hr />
+          </div>
+          <button className="logIn_whiteButton">
+            <FcGoogle />
+            <span>Continue with Google</span>
+          </button>
+          <button className="logIn_whiteButton">
+            <SiApple />
+            <span>Continue with Apple</span>
+          </button>
+          <div className="logIn_create">
+            <span>First time here?</span>
+            <button className="logIn_pinkButton">Create an account</button>
           </div>
         </div>
       </div>
