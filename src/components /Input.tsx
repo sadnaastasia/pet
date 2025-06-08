@@ -49,6 +49,7 @@ function Input({ type, text }: { type: any; text: string }) {
         id={type}
         className={`logIn-input ${error ? 'logIn-input_error' : ''}`}
         value={inputValue}
+        onClick={handleInputChange}
         onChange={handleInputChange}
         onBlur={handleBlur}
         required

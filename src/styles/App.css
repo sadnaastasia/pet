@@ -149,7 +149,7 @@
   color: rgb(180, 178, 178);
 }
 .nav .side-menu .side-menu_button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: medium;
   display: flex;
   justify-content: space-between;
@@ -263,7 +263,12 @@
   color: rgb(199, 4, 4);
 }
 .nav .logIn .logIn_main .logIn-item .logIn-input:focus ~ .logIn-label,
-.nav .logIn .logIn_main .logIn-item .logIn-input:not(:focus):valid ~ .logIn-label {
+.nav
+  .logIn
+  .logIn_main
+  .logIn-item
+  .logIn-input:not(:focus):valid
+  ~ .logIn-label {
   top: -8px;
   font-size: 10px;
   font-size: x-small;
@@ -372,7 +377,7 @@
 .beckoningInfo .verticalMarquee .verticalTrack {
   padding-left: 50px;
   margin: 0;
-  animation: vertical-scroll 10s steps(5, end) infinite;
+  animation: vertical-scroll 15s steps(5, end) infinite;
   list-style: none;
 }
 .beckoningInfo .blockWithMarquee_mediumText {
@@ -396,7 +401,7 @@
   background-position: center center;
   padding: 0px 50px;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: medium;
   border-radius: 2rem;
   border: none;
@@ -428,32 +433,56 @@
 .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button_red:hover {
   background-image: none;
   background: #f56464;
-  background: linear-gradient(90deg, rgb(245, 100, 100) 35%, rgb(255, 218, 166) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(245, 100, 100) 35%,
+    rgb(255, 218, 166) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#F56464", endColorstr="#FFDAA6", GradientType=1 );
 }
 .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button_green:hover {
   background: #9bbea2;
-  background: linear-gradient(90deg, rgb(155, 190, 162) 50%, rgb(255, 207, 117) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(155, 190, 162) 50%,
+    rgb(255, 207, 117) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#9BBEA2", endColorstr="#FFCF75", GradientType=1 );
 }
 .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button_blue:hover {
   background: #dbb2cb;
-  background: linear-gradient(90deg, rgb(219, 178, 203) 36%, rgb(125, 166, 182) 76%);
+  background: linear-gradient(
+    90deg,
+    rgb(219, 178, 203) 36%,
+    rgb(125, 166, 182) 76%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#DBB2CB", endColorstr="#7DA6B6", GradientType=1 );
 }
 .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button_yellow:hover {
   background: #63d0ff;
-  background: linear-gradient(90deg, rgb(99, 208, 255) 0%, rgb(255, 237, 122) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(99, 208, 255) 0%,
+    rgb(255, 237, 122) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#63D0FF", endColorstr="#FFED7A", GradientType=1 );
 }
 .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button_violet:hover {
   background: #b67da2;
-  background: linear-gradient(90deg, rgb(182, 125, 162) 50%, rgb(255, 207, 117) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(182, 125, 162) 50%,
+    rgb(255, 207, 117) 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#B67DA2", endColorstr="#FFCF75", GradientType=1 );
 }
 .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button_pink:hover {
   background: #b8c8e6;
-  background: linear-gradient(90deg, rgb(184, 200, 230) 36%, rgb(220, 177, 212) 71%);
+  background: linear-gradient(
+    90deg,
+    rgb(184, 200, 230) 36%,
+    rgb(220, 177, 212) 71%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#B8C8E6", endColorstr="#DCB1D4", GradientType=1 );
 }
 
@@ -555,4 +584,4 @@
   .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button {
     padding: 0px 20px;
   }
-}/*# sourceMappingURL=App.css.map */
+} /*# sourceMappingURL=App.css.map */
