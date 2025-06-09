@@ -9,6 +9,8 @@ function App() {
       <RunningLine />
       <Navigation />
       <BeckoningInfo />
+      <div className="mainArticle"></div>
+      <div className="articles"></div>
     </>
   );
 }
