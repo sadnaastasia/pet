@@ -504,7 +504,7 @@
 }
 .mainArticle {
   height: 100vh;
-  background-image: url("../../public/pexels-photo-8560221.webp");
+  background-image: url("../../public/mainArticleBigScreens.webp");
   background-color: rgba(0, 0, 0, 0.5);
   background-position: center center;
   opacity: 0.7;
@@ -571,7 +571,7 @@
     height: 30rem;
   }
   .mainArticle {
-    background-image: url("../../public/pexels-photo-8560223.webp");
+    background-image: url("../../public/mainArticleSmallScreens.webp");
   }
 }
 @media (max-width: 450px) {
