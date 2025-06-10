@@ -7,8 +7,17 @@ import { GrMoney } from 'react-icons/gr';
 import { MdOutlineSelfImprovement } from 'react-icons/md';
 import { MdChildCare } from 'react-icons/md';
 import { BsSpeedometer } from 'react-icons/bs';
+import type { ReactNode } from 'react';
 
-export const runningLineArray = [
+interface Item {
+  id: number;
+  title: string;
+  icon?: ReactNode;
+  style?: string;
+  class?: string;
+}
+
+export const runningLineArray: Array<Item> = [
   { id: 1, title: "It's effective", icon: <GiPowerLightning /> },
   { id: 2, title: 'Short-term', icon: <FaStopwatch /> },
   {
@@ -28,7 +37,7 @@ export const runningLineArray = [
   { id: 9, title: 'Quick results', icon: <BsSpeedometer /> },
 ];
 
-export const impactScroll = [
+export const impactScroll: Array<Item> = [
   { id: 1, title: 'Emotional well-being', style: 'rgb(176, 171, 218)' },
   {
     id: 2,
@@ -44,7 +53,7 @@ export const impactScroll = [
   { id: 5, title: 'Decreased anxiety', style: 'rgb(145, 201, 211)' },
 ];
 
-export const beckoningInfo_button = [
+export const beckoningInfo_button: Array<Item> = [
   {
     id: 1,
     title: 'What is cognitive behavioral therapy?',
@@ -77,7 +86,7 @@ export const beckoningInfo_button = [
   },
 ];
 
-export const sideMenu_button = [
+export const sideMenu_button: Array<Item> = [
   {
     id: 1,
     title: 'Our school',

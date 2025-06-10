@@ -8,9 +8,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { SiApple } from 'react-icons/si';
 
 function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLogInOpen, setIsLogInOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isLogInOpen, setIsLogInOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<string>('');
 
   const dynamicStyles = {
     overflowHidden: {
@@ -21,15 +21,15 @@ function Navigation() {
     },
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
     blockScroll();
   };
-  const toggleLogIn = () => {
+  const toggleLogIn = (): void => {
     setIsLogInOpen(!isLogInOpen);
     blockScroll();
   };
-  const blockScroll = () => {
+  const blockScroll = (): void => {
     if (!isMenuOpen && !isLogInOpen) {
       Object.assign(document.body.style, dynamicStyles.overflowHidden);
     } else {
@@ -38,7 +38,7 @@ function Navigation() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       if (window.scrollY > window.innerHeight) {
         setIsScrolled('navGrey');
       } else {

@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { MdErrorOutline } from 'react-icons/md';
+import { type ChangeEvent } from 'react';
 
 function Input({ type, text }: { type: any; text: string }) {
-  const [inputValue, setInputValue] = useState('');
-  const [isClassAdded, setIsClassAdded] = useState(false);
-  const [error, setError] = useState('');
+  const [inputValue, setInputValue] = useState<string>('');
+  const [isClassAdded, setIsClassAdded] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
-  const handleInputChange = (event: any) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
     setIsClassAdded(false);
     if (text === 'Email') {
@@ -17,12 +19,25 @@ function Input({ type, text }: { type: any; text: string }) {
     }
   };
 
-  const handleBlur = () => {
+  const handleInputClick = (): void => {
+    if (!isClicked) {
+      setIsClassAdded(false);
+      if (text === 'Email') {
+        validateEmail('');
+      }
+      if (text === 'Password') {
+        validatePassword('');
+      }
+      setIsClicked(true);
+    }
+  };
+
+  const handleBlur = (): void => {
     if (inputValue !== '') {
       setIsClassAdded(true);
     }
   };
-  const validateEmail = function (email: string) {
+  const validateEmail = function (email: string): void {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === '') {
       setError('Please enter your email.');
@@ -33,7 +48,7 @@ function Input({ type, text }: { type: any; text: string }) {
       setError('');
     }
   };
-  const validatePassword = function (password: string) {
+  const validatePassword = function (password: string): void {
     if (password === '') {
       setError('Please enter your password.');
     } else if (password.length < 10) {
@@ -49,7 +64,7 @@ function Input({ type, text }: { type: any; text: string }) {
         id={type}
         className={`logIn-input ${error ? 'logIn-input_error' : ''}`}
         value={inputValue}
-        onClick={handleInputChange}
+        onClick={handleInputClick}
         onChange={handleInputChange}
         onBlur={handleBlur}
         required
