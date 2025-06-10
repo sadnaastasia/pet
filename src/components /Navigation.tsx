@@ -1,7 +1,7 @@
 import { IoMenu } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
 import { IoIosArrowForward } from 'react-icons/io';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { sideMenu_button } from '../data/data';
 import Input from './Input';
 import { FcGoogle } from 'react-icons/fc';
@@ -10,15 +10,35 @@ import { SiApple } from 'react-icons/si';
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLogInOpen, setIsLogInOpen] = useState(false);
+  const dynamicStyles = {
+    overflowHidden: {
+      overflow: 'hidden',
+    },
+    overflowAuto: {
+      overflow: 'auto',
+    },
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    blockScroll();
   };
   const toggleLogIn = () => {
     setIsLogInOpen(!isLogInOpen);
+    blockScroll();
+  };
+  const blockScroll = () => {
+    if (!isMenuOpen && !isLogInOpen) {
+      Object.assign(document.body.style, dynamicStyles.overflowHidden);
+    } else {
+      Object.assign(document.body.style, dynamicStyles.overflowAuto);
+    }
   };
   return (
     <nav className="nav">
+      <div
+        className={`${isMenuOpen || isLogInOpen ? 'overlay' : 'overlayNone'}`}
+      ></div>
       <div>CBT</div>
       <div className="nav_buttons">
         <button className="nav_logIn" onClick={toggleLogIn}>

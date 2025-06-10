@@ -5,13 +5,13 @@ import BeckoningInfo from './components /BeckoningInfo';
 
 function App() {
   return (
-    <>
+    <div>
       <RunningLine />
       <Navigation />
       <BeckoningInfo />
       <div className="mainArticle"></div>
       <div className="articles"></div>
-    </>
+    </div>
   );
 }
 
