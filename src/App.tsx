@@ -8,6 +8,7 @@ function App() {
     <div>
       <RunningLine />
       <Navigation />
+      <div className="navOverlay"></div>
       <BeckoningInfo />
       <div className="mainArticle"></div>
       <div className="articles"></div>

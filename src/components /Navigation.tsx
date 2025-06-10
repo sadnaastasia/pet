@@ -1,7 +1,7 @@
 import { IoMenu } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
 import { IoIosArrowForward } from 'react-icons/io';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { sideMenu_button } from '../data/data';
 import Input from './Input';
 import { FcGoogle } from 'react-icons/fc';
@@ -10,6 +10,8 @@ import { SiApple } from 'react-icons/si';
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLogInOpen, setIsLogInOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState('');
+
   const dynamicStyles = {
     overflowHidden: {
       overflow: 'hidden',
@@ -34,12 +36,29 @@ function Navigation() {
       Object.assign(document.body.style, dynamicStyles.overflowAuto);
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setIsScrolled('navGrey');
+      } else {
+        setIsScrolled('');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="nav">
+    <nav className={`nav ${isScrolled}`}>
       <div
         className={`${isMenuOpen || isLogInOpen ? 'overlay' : 'overlayNone'}`}
       ></div>
-      <div>CBT</div>
+      <div className="logo">CBT</div>
       <div className="nav_buttons">
         <button className="nav_logIn" onClick={toggleLogIn}>
           Log in
