@@ -627,6 +627,7 @@ $greyhover: rgb(223, 223, 223);
   color: black;
   height: 100vh;
   background-image: url('../../public/mainArticleBigScreens.webp');
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   background-position: center center;
   opacity: 0.9;
@@ -732,6 +733,7 @@ $greyhover: rgb(223, 223, 223);
   }
   .mainArticle {
     background-image: url('../../public/mainArticleSmallScreens.webp');
+    height: 100vh;
     padding: 170px 150px;
     h1 {
       font-size: x-large;
@@ -778,6 +780,12 @@ $greyhover: rgb(223, 223, 223);
       .beckoningInfo_button {
         padding: 0px 20px;
       }
+    }
+  }
+  .mainArticle {
+    padding-top: 60px;
+    .mainArticle_buttons {
+      bottom: 80px;
     }
   }
 }

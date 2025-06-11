@@ -511,6 +511,7 @@
   color: black;
   height: 100vh;
   background-image: url("../../public/mainArticleBigScreens.webp");
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
   background-position: center center;
   opacity: 0.9;
@@ -615,6 +616,7 @@
   }
   .mainArticle {
     background-image: url("../../public/mainArticleSmallScreens.webp");
+    height: 100vh;
     padding: 170px 150px;
   }
   .mainArticle h1 {
@@ -657,5 +659,11 @@
   }
   .beckoningInfo .beckoningInfo_moreInfo .beckoningInfo_button {
     padding: 0px 20px;
+  }
+  .mainArticle {
+    padding-top: 60px;
+  }
+  .mainArticle .mainArticle_buttons {
+    bottom: 80px;
   }
 }/*# sourceMappingURL=App.css.map */
