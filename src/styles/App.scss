@@ -321,6 +321,10 @@ $greyhover: rgb(223, 223, 223);
         cursor: pointer;
         background-color: rgb(71, 71, 71);
       }
+      .logIn_blackButton:disabled {
+        cursor: auto;
+        background-color: rgb(128, 128, 128);
+      }
       .logIn_line {
         display: flex;
         align-items: center;
@@ -621,7 +625,7 @@ $greyhover: rgb(223, 223, 223);
 .mainArticle {
   position: relative;
   display: flex;
-  padding: 20px 350px;
+  padding: 100px 350px;
   flex-direction: column;
   align-items: center;
   color: black;
@@ -642,7 +646,7 @@ $greyhover: rgb(223, 223, 223);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 280px;
+    bottom: 230px;
     .mainArticle_whiteButton {
       background-color: white;
       border: none;
@@ -734,9 +738,12 @@ $greyhover: rgb(223, 223, 223);
   .mainArticle {
     background-image: url('../../public/mainArticleSmallScreens.webp');
     height: 100vh;
-    padding: 170px 150px;
+    padding: 80px 150px;
     h1 {
       font-size: x-large;
+    }
+    .mainArticle_buttons {
+      bottom: 150px;
     }
   }
 }

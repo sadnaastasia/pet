@@ -2,7 +2,15 @@ import { useState } from 'react';
 import { MdErrorOutline } from 'react-icons/md';
 import { type ChangeEvent } from 'react';
 
-function Input({ type, text }: { type: any; text: string }) {
+function Input({
+  type,
+  text,
+  setIsInputlValid,
+}: {
+  type: any;
+  text: string;
+  setIsInputlValid: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const [inputValue, setInputValue] = useState<string>('');
   const [isClassAdded, setIsClassAdded] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -41,20 +49,26 @@ function Input({ type, text }: { type: any; text: string }) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === '') {
       setError('Please enter your email.');
+      setIsInputlValid(false);
       return;
     } else if (!emailRegex.test(email)) {
       setError('Please enter a valid email address.');
+      setIsInputlValid(false);
     } else {
       setError('');
+      setIsInputlValid(true);
     }
   };
   const validatePassword = function (password: string): void {
     if (password === '') {
       setError('Please enter your password.');
+      setIsInputlValid(false);
     } else if (password.length < 10) {
       setError('Password must contain at least 10 characters');
+      setIsInputlValid(false);
     } else {
       setError('');
+      setIsInputlValid(true);
     }
   };
   return (

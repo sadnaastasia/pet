@@ -11,6 +11,8 @@ function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLogInOpen, setIsLogInOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<string>('');
+  const [isEmailValid, setIsEmailValid] = useState<boolean>(false);
+  const [isPasswordValid, setIsPasswordValid] = useState<boolean>(false);
 
   const dynamicStyles = {
     overflowHidden: {
@@ -92,12 +94,21 @@ function Navigation() {
         </div>
         <div className="logIn_main">
           <h4 className="main_welcome">Welcome back</h4>
-          <Input type="email" text="Email" />
-          <Input type="password" text="Password" />
+          <Input type="email" text="Email" setIsInputlValid={setIsEmailValid} />
+          <Input
+            type="password"
+            text="Password"
+            setIsInputlValid={setIsPasswordValid}
+          />
           <div className="logIn_resetPassword">
             <button className="logIn_pinkButton">Forgot your password?</button>
           </div>
-          <button className="logIn_blackButton">Log in</button>
+          <button
+            className="logIn_blackButton"
+            disabled={!isEmailValid || !isPasswordValid}
+          >
+            Log in
+          </button>
           <div className="logIn_line">
             <hr />
             or

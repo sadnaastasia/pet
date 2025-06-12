@@ -317,6 +317,10 @@
   cursor: pointer;
   background-color: rgb(71, 71, 71);
 }
+.nav .logIn .logIn_main .logIn_blackButton:disabled {
+  cursor: auto;
+  background-color: rgb(128, 128, 128);
+}
 .nav .logIn .logIn_main .logIn_line {
   display: flex;
   align-items: center;
@@ -505,7 +509,7 @@
 .mainArticle {
   position: relative;
   display: flex;
-  padding: 20px 350px;
+  padding: 100px 350px;
   flex-direction: column;
   align-items: center;
   color: black;
@@ -527,7 +531,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  bottom: 280px;
+  bottom: 230px;
 }
 .mainArticle .mainArticle_buttons .mainArticle_whiteButton {
   background-color: white;
@@ -617,10 +621,13 @@
   .mainArticle {
     background-image: url("../../public/mainArticleSmallScreens.webp");
     height: 100vh;
-    padding: 170px 150px;
+    padding: 80px 150px;
   }
   .mainArticle h1 {
     font-size: x-large;
+  }
+  .mainArticle .mainArticle_buttons {
+    bottom: 150px;
   }
 }
 @media (max-width: 450px) {
