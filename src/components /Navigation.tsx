@@ -11,7 +11,9 @@ function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLogInOpen, setIsLogInOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<string>('');
-  const [isEmailValid, setIsEmailValid] = useState<boolean>(false);
+  const [isEmailValid, setIsEmailValid] = useState<boolean>(
+    localStorage.getItem('email') ? true : false
+  );
   const [isPasswordValid, setIsPasswordValid] = useState<boolean>(false);
 
   const dynamicStyles = {
@@ -94,10 +96,16 @@ function Navigation() {
         </div>
         <div className="logIn_main">
           <h4 className="main_welcome">Welcome back</h4>
-          <Input type="email" text="Email" setIsInputlValid={setIsEmailValid} />
+          <Input
+            type="email"
+            text="Email"
+            isInputValid={isEmailValid}
+            setIsInputlValid={setIsEmailValid}
+          />
           <Input
             type="password"
             text="Password"
+            isInputValid={isPasswordValid}
             setIsInputlValid={setIsPasswordValid}
           />
           <div className="logIn_resetPassword">

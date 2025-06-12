@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { MdErrorOutline } from 'react-icons/md';
 import { type ChangeEvent } from 'react';
+import { LuEye } from 'react-icons/lu';
+import { LuEyeClosed } from 'react-icons/lu';
 
 function Input({
   type,
   text,
+  isInputValid,
   setIsInputlValid,
 }: {
   type: any;
   text: string;
+  isInputValid: boolean;
   setIsInputlValid: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [inputValue, setInputValue] = useState<string>(
@@ -17,16 +21,18 @@ function Input({
   const [isClassAdded, setIsClassAdded] = useState<boolean>(
     inputValue !== '' ? true : false
   );
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string>();
   const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [isEye, setIsEye] = useState<boolean>(false);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
-    if (text === 'Email') {
+    setIsClassAdded(true);
+    if (text === 'Email' && isInputValid) {
       localStorage.setItem('email', event.target.value);
+    } else if (text === 'Email' && !isInputValid) {
+      localStorage.setItem('email', '');
     }
-    localStorage.setItem('email', event.target.value);
-    setIsClassAdded(false);
     if (text === 'Email') {
       validateEmail(event.target.value);
     }
@@ -37,7 +43,7 @@ function Input({
 
   const handleInputClick = (): void => {
     if (!isClicked) {
-      setIsClassAdded(false);
+      setIsClassAdded(true);
       if (text === 'Email') {
         validateEmail(inputValue);
       }
@@ -46,11 +52,14 @@ function Input({
       }
       setIsClicked(true);
     }
+    setIsClassAdded(true);
   };
 
   const handleBlur = (): void => {
     if (inputValue !== '') {
       setIsClassAdded(true);
+    } else {
+      setIsClassAdded(false);
     }
   };
   const validateEmail = function (email: string): void {
@@ -79,18 +88,37 @@ function Input({
       setIsInputlValid(true);
     }
   };
+  const handleEyeClick = () => {
+    setIsEye(!isEye);
+  };
+
   return (
     <div className="logIn-item">
-      <input
-        type={type}
-        id={type}
-        className={`logIn-input ${error ? 'logIn-input_error' : ''}`}
-        value={inputValue}
+      <div
+        className={`input-container ${error ? 'logIn-input_error' : ''}`}
         onClick={handleInputClick}
-        onChange={handleInputChange}
-        onBlur={handleBlur}
-        required
-      />
+      >
+        <input
+          type={type === 'password' ? (isEye ? 'text' : 'password') : type}
+          value={inputValue}
+          className={'logIn-input'}
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+          id={type}
+          required
+        />
+        {type === 'password' ? (
+          <button
+            className="password-eye"
+            onClick={handleEyeClick}
+            onBlur={handleBlur}
+          >
+            {isEye ? <LuEye /> : <LuEyeClosed />}
+          </button>
+        ) : (
+          ''
+        )}
+      </div>
       <label
         htmlFor={type}
         className={`${isClassAdded ? 'logIn-label_filled' : 'logIn-label'} ${

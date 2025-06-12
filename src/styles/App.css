@@ -229,13 +229,30 @@
   position: relative;
   margin-top: 10px;
 }
-.nav .logIn .logIn_main .logIn-item .logIn-input {
+.nav .logIn .logIn_main .logIn-item .input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: #333333 1px solid;
   box-sizing: border-box;
   width: 100%;
   height: 40px;
   padding: 30px 15px;
-  border-radius: 10px;
-  border: #333333 1px solid;
+}
+.nav .logIn .logIn_main .logIn-item .input-container .logIn-input {
+  flex-grow: 1;
+  padding: 5px;
+  outline: none;
+  cursor: default;
+  border: none;
+}
+.nav .logIn .logIn_main .logIn-item .input-container .password-eye {
+  background: white;
+  border: none;
+}
+.nav .logIn .logIn_main .logIn-item .input-container .password-eye {
+  cursor: pointer;
 }
 .nav .logIn .logIn_main .logIn-item .logIn-input_error {
   border-color: rgb(199, 4, 4);
