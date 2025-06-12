@@ -737,6 +737,19 @@ $greyhover: rgb(223, 223, 223);
   }
 }
 
+@media (max-width: 1300px) {
+  @media (max-height: 700px &&) {
+    .mainCourse {
+      h1 {
+        font-size: x-large;
+      }
+      padding: 80px 350px;
+      .mainCourse_buttons {
+        bottom: 150px;
+      }
+    }
+  }
+}
 @media (max-width: 1000px) {
   .running-line {
     font-size: xx-small;
@@ -854,18 +867,6 @@ $greyhover: rgb(223, 223, 223);
     padding-top: 60px;
     .mainCourse_buttons {
       bottom: 80px;
-    }
-  }
-}
-
-@media (max-height: 700px) {
-  .mainCourse {
-    h1 {
-      font-size: x-large;
-    }
-    padding: 80px 350px;
-    .mainCourse_buttons {
-      bottom: 150px;
     }
   }
 }

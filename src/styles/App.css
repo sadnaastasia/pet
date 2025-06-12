@@ -625,6 +625,17 @@
   border-radius: 40px;
 }
 
+@media (max-width: 1300px) and (max-height: 700px) {
+  .mainCourse {
+    padding: 80px 350px;
+  }
+  .mainCourse h1 {
+    font-size: x-large;
+  }
+  .mainCourse .mainCourse_buttons {
+    bottom: 150px;
+  }
+}
 @media (max-width: 1000px) {
   .running-line {
     font-size: xx-small;
@@ -734,16 +745,5 @@
   }
   .mainCourse .mainCourse_buttons {
     bottom: 80px;
-  }
-}
-@media (max-height: 700px) {
-  .mainCourse {
-    padding: 80px 350px;
-  }
-  .mainCourse h1 {
-    font-size: x-large;
-  }
-  .mainCourse .mainCourse_buttons {
-    bottom: 150px;
   }
 }/*# sourceMappingURL=App.css.map */
