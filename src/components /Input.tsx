@@ -11,13 +11,21 @@ function Input({
   text: string;
   setIsInputlValid: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const [inputValue, setInputValue] = useState<string>('');
-  const [isClassAdded, setIsClassAdded] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState<string>(
+    type === 'email' ? localStorage.getItem('email') || '' : ''
+  );
+  const [isClassAdded, setIsClassAdded] = useState<boolean>(
+    inputValue !== '' ? true : false
+  );
   const [error, setError] = useState<string>('');
   const [isClicked, setIsClicked] = useState<boolean>(false);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
+    if (text === 'Email') {
+      localStorage.setItem('email', event.target.value);
+    }
+    localStorage.setItem('email', event.target.value);
     setIsClassAdded(false);
     if (text === 'Email') {
       validateEmail(event.target.value);
@@ -31,10 +39,10 @@ function Input({
     if (!isClicked) {
       setIsClassAdded(false);
       if (text === 'Email') {
-        validateEmail('');
+        validateEmail(inputValue);
       }
       if (text === 'Password') {
-        validatePassword('');
+        validatePassword(inputValue);
       }
       setIsClicked(true);
     }
