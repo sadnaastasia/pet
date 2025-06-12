@@ -2,7 +2,8 @@ import './styles/App.css';
 import RunningLine from './components /Running-line';
 import Navigation from './components /Navigation';
 import BeckoningInfo from './components /BeckoningInfo';
-import MainArticle from './components /MainArticle';
+import MainCourse from './components /MainCourse';
+import AboutMainCourse from './components /AboutMainCourse';
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <RunningLine />
       <Navigation />
       <BeckoningInfo />
-      <MainArticle />
-      <div className="articles"></div>
+      <MainCourse />
+      <AboutMainCourse />
     </div>
   );
 }
