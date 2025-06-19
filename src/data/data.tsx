@@ -11,7 +11,7 @@ import type { ReactNode } from 'react';
 
 interface Item {
   id: number;
-  title: string;
+  title?: string;
   icon?: ReactNode;
   style?: string;
   class?: string;
@@ -57,32 +57,32 @@ export const beckoningInfo_button: Array<Item> = [
   {
     id: 1,
     title: 'What is cognitive behavioral therapy?',
-    class: 'beckoningInfo_button beckoningInfo_button_red',
+    class: 'articles_button articles_button_red',
   },
   {
     id: 2,
     title: 'Cognitive model',
-    class: 'beckoningInfo_button beckoningInfo_button_green',
+    class: 'articles_button articles_button_green',
   },
   {
     id: 3,
     title: 'Clinical Significance',
-    class: 'beckoningInfo_button beckoningInfo_button_blue',
+    class: 'articles_button articles_button_blue',
   },
   {
     id: 4,
     title: 'How does CBT works?',
-    class: 'beckoningInfo_button beckoningInfo_button_yellow',
+    class: 'articles_button articles_button_yellow',
   },
   {
     id: 5,
     title: 'What techniques are used in CBT?',
-    class: 'beckoningInfo_button beckoningInfo_button_violet',
+    class: 'articles_button articles_button_violet',
   },
   {
     id: 6,
     title: 'Who suits CBT?',
-    class: 'beckoningInfo_button beckoningInfo_button_pink',
+    class: 'articles_button articles_button_pink',
   },
 ];
 

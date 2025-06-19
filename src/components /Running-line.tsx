@@ -5,20 +5,20 @@ function RunningLine() {
   const contentElement = useMemo(() => {
     return runningLineArray.map((elem) => (
       <li key={elem.id} className="content_element">
-        <div className="content_element_pic">{elem.icon}</div>
+        <div className="element_pic">{elem.icon}</div>
         {elem.title}
       </li>
     ));
   }, []);
   return (
     <div className="running-line">
-      <div className="running-line_minor">Why CBT?</div>
+      <div className="running-line_text">Why CBT?</div>
       <hr />
-      <div className="marquee">
-        <div className="track">
-          <ul className="content">{contentElement}</ul>
-          <ul className="content">{contentElement}</ul>
-          <ul className="content">{contentElement}</ul>
+      <div className="running-line_marquee">
+        <div className="running-line_track">
+          <ul className="track_content">{contentElement}</ul>
+          <ul className="track_content">{contentElement}</ul>
+          <ul className="track_content">{contentElement}</ul>
         </div>
       </div>
     </div>

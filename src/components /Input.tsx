@@ -93,15 +93,15 @@ function Input({
   };
 
   return (
-    <div className="logIn-item">
+    <div className="login-item">
       <div
-        className={`input-container ${error ? 'logIn-input_error' : ''}`}
+        className={`input-container ${error ? 'login-input_error' : ''}`}
         onClick={handleInputClick}
       >
         <input
           type={type === 'password' ? (isEye ? 'text' : 'password') : type}
           value={inputValue}
-          className={'logIn-input'}
+          className={'login-input'}
           onChange={handleInputChange}
           onBlur={handleBlur}
           id={type}
@@ -121,14 +121,14 @@ function Input({
       </div>
       <label
         htmlFor={type}
-        className={`${isClassAdded ? 'logIn-label_filled' : 'logIn-label'} ${
-          error ? 'logIn-label_error' : ''
+        className={`${isClassAdded ? 'login-label_filled' : 'login-label'} ${
+          error ? 'login-label_error' : ''
         }`}
       >
         {text}
       </label>
       {error ? (
-        <p className="errorMessage">
+        <p className="error-message">
           <MdErrorOutline style={{ stroke: 'red' }} />
           <span>{error}</span>
         </p>
