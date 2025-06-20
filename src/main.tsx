@@ -1,14 +1,38 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import App from './App.tsx';
-import { store } from './store/store.ts';
-import { Provider } from 'react-redux';
+import './styles/App.css';
+import RunningLine from './components /Running-line';
+import Navigation from './components /Navigation';
+import BeckoningInfo from './components /BeckoningInfo';
+import MainCourse from './components /MainCourse';
+import AboutMainCourse from './components /AboutMainCourse';
+import { useState, useEffect } from 'react';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </StrictMode>
-);
+function Main() {
+  const [isScrolled, setIsScrolled] = useState<string>('');
+
+  useEffect(() => {
+    const handleScroll = (): void => {
+      if (window.scrollY > window.innerHeight) {
+        setIsScrolled('nav_grey');
+      } else {
+        setIsScrolled('');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return (
+    <div>
+      <RunningLine />
+      <Navigation isScrolled={isScrolled} />
+      <BeckoningInfo />
+      <MainCourse />
+      <AboutMainCourse />
+    </div>
+  );
+}
+
+export default Main;

@@ -1,16 +1,16 @@
 import { IoMenu } from 'react-icons/io5';
 import { IoClose } from 'react-icons/io5';
 import { IoIosArrowForward } from 'react-icons/io';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { sideMenu_button } from '../data/data';
 import Input from './Input';
 import { FcGoogle } from 'react-icons/fc';
 import { SiApple } from 'react-icons/si';
+import { GrBasket } from 'react-icons/gr';
 
-function Navigation() {
+function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLogInOpen, setIsLogInOpen] = useState<boolean>(false);
-  const [isScrolled, setIsScrolled] = useState<string>('');
   const [isEmailValid, setIsEmailValid] = useState<boolean>(
     localStorage.getItem('email') ? true : false
   );
@@ -40,23 +40,6 @@ function Navigation() {
       Object.assign(document.body.style, dynamicStyles.overflowAuto);
     }
   };
-
-  useEffect(() => {
-    const handleScroll = (): void => {
-      if (window.scrollY > window.innerHeight) {
-        setIsScrolled('nav_grey');
-      } else {
-        setIsScrolled('');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <nav className={`nav ${isScrolled}`}>
       <div
@@ -64,6 +47,9 @@ function Navigation() {
       ></div>
       <div className="nav_logo">CBT</div>
       <div className="nav_buttons">
+        <button className="button_basket">
+          <GrBasket />
+        </button>
         <button className="button_login" onClick={toggleLogIn}>
           Log in
         </button>
