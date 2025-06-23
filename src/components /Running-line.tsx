@@ -1,15 +1,12 @@
 import { runningLineArray } from '../data/data';
-import { useMemo } from 'react';
 
 function RunningLine() {
-  const contentElement = useMemo(() => {
-    return runningLineArray.map((elem) => (
-      <li key={elem.id} className="content_element">
-        <div className="element_pic">{elem.icon}</div>
-        {elem.title}
-      </li>
-    ));
-  }, []);
+  const contentElement = runningLineArray.map((elem) => (
+    <li key={elem.id} className="content_element">
+      <div className="element_pic">{elem.icon}</div>
+      {elem.title}
+    </li>
+  ));
   return (
     <div className="running-line">
       <div className="running-line_text">Why CBT?</div>
