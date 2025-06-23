@@ -445,19 +445,19 @@
 .nav_grey .nav_logo {
   color: white;
 }
-.nav_grey .nav_buttons .button_basket svg {
+.nav_grey .nav_buttons .button-cart svg {
   stroke: white;
 }
-.nav_grey .nav_buttons .button_basket:hover {
+.nav_grey .nav_buttons .button-cart:hover {
   background-color: #8d8d8d;
 }
-.nav_grey .nav_buttons .button_login {
+.nav_grey .nav_buttons .button-login {
   box-shadow: none;
 }
-.nav_grey .nav_buttons .button_menu svg {
+.nav_grey .nav_buttons .button-menu svg {
   stroke: white;
 }
-.nav_grey .nav_buttons .button_menu:hover {
+.nav_grey .nav_buttons .button-menu:hover {
   background-color: #8d8d8d;
 }
 
