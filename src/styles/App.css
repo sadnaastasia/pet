@@ -79,7 +79,8 @@
   display: flex;
   align-items: center;
 }
-.nav .nav_buttons .button_basket {
+.nav .nav_buttons .button-cart {
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10rem;
@@ -87,16 +88,30 @@
   border: none;
   padding: 0.5rem;
   margin-right: 0.5rem;
+  position: relative;
 }
-.nav .nav_buttons .button_basket svg {
-  width: 1.3rem;
-  height: 1.3rem;
+.nav .nav_buttons .button-cart svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
-.nav .nav_buttons .button_basket:hover {
+.nav .nav_buttons .button-cart .button-cart_number {
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 20px;
+  background-color: rgb(244, 244, 244);
+  width: 0.8rem;
+  height: 0.8rem;
+  bottom: -0.1rem;
+  right: -0.3rem;
+}
+.nav .nav_buttons .button-cart:hover {
   cursor: pointer;
   background-color: rgb(223, 223, 223);
 }
-.nav .nav_buttons .button_login {
+.nav .nav_buttons .button-login {
   font-size: 0.8rem;
   background-color: white;
   border: 1px solid rgb(249, 249, 249);
@@ -105,11 +120,11 @@
   margin-right: 0.5rem;
   box-shadow: 1px 1px 10px rgba(221, 221, 221, 0.5);
 }
-.nav .nav_buttons .button_login:hover {
+.nav .nav_buttons .button-login:hover {
   cursor: pointer;
   background-color: rgb(223, 223, 223);
 }
-.nav .nav_buttons .button_menu {
+.nav .nav_buttons .button-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,11 +133,11 @@
   border: none;
   padding: 0.5rem;
 }
-.nav .nav_buttons .button_menu svg {
+.nav .nav_buttons .button-menu svg {
   width: 1.5rem;
   height: 1.5rem;
 }
-.nav .nav_buttons .button_menu:hover {
+.nav .nav_buttons .button-menu:hover {
   cursor: pointer;
   background-color: rgb(223, 223, 223);
 }

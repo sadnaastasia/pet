@@ -1,5 +1,7 @@
 import { AiOutlineLoading } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { increment } from '../slices/cartSlice';
 
 function ProductItem({
   image,
@@ -12,6 +14,8 @@ function ProductItem({
   info: string;
   price: string;
 }) {
+  const dispatch = useDispatch();
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -24,6 +28,10 @@ function ProductItem({
       setIsLoading(false);
     };
   }, [image]);
+
+  const toggleCart = () => {
+    dispatch(increment());
+  };
   return (
     <div className="item_container">
       <div>
@@ -38,7 +46,9 @@ function ProductItem({
         <p>{info}</p>
         <h3>{price}</h3>
       </div>
-      <button className="item_button">Add to cart</button>
+      <button className="item_button" onClick={toggleCart}>
+        Add to cart
+      </button>
     </div>
   );
 }

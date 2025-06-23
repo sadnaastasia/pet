@@ -6,7 +6,9 @@ import { sideMenu_button } from '../data/data';
 import Input from './Input';
 import { FcGoogle } from 'react-icons/fc';
 import { SiApple } from 'react-icons/si';
-import { GrBasket } from 'react-icons/gr';
+import { FaCartShopping } from 'react-icons/fa6';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../store/store';
 
 function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -15,6 +17,7 @@ function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
     localStorage.getItem('email') ? true : false
   );
   const [isPasswordValid, setIsPasswordValid] = useState<boolean>(false);
+  const numberOfItems = useSelector((state: RootState) => state.cart.value);
 
   const dynamicStyles = {
     overflowHidden: {
@@ -47,13 +50,16 @@ function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
       ></div>
       <div className="nav_logo">CBT</div>
       <div className="nav_buttons">
-        <button className="button_basket">
-          <GrBasket />
+        <button className="button-cart">
+          <FaCartShopping />
+          <div className="button-cart_number">
+            <span>{numberOfItems}</span>
+          </div>
         </button>
-        <button className="button_login" onClick={toggleLogIn}>
+        <button className="button-login" onClick={toggleLogIn}>
           Log in
         </button>
-        <button className="button_menu" onClick={toggleMenu}>
+        <button className="button-menu" onClick={toggleMenu}>
           <IoMenu />
         </button>
       </div>
