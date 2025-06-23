@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: flex-start;
 }
-.running-line .running-line_marquee .track:hover {
+.running-line .running-line_marquee .running-line_track:hover {
   animation-play-state: paused;
 }
 
