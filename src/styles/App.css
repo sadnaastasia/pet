@@ -795,17 +795,35 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.items_container .item_container .item_button {
-  width: 8rem;
+.items_container .item_container .item_button-add {
+  width: 10rem;
   height: 3rem;
   border: none;
   border-radius: 20px;
   background-color: #f8b7df;
   color: white;
 }
-.items_container .item_container .item_button:hover {
+.items_container .item_container .item_button-add:hover {
   cursor: pointer;
   background-color: #f6adda;
+}
+.items_container .item_container .item_button-delete {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #4c4c4c;
+  color: white;
+}
+.items_container .item_container .item_button-delete:hover {
+  cursor: pointer;
+  background-color: #3f3f3f;
+}
+.items_container .item_container .item_display-none {
+  display: none;
+}
+.items_container .item_container .item_display-block {
+  display: block;
 }
 
 @keyframes spin {

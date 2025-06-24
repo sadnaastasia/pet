@@ -5,7 +5,7 @@ import ProductItem from './components /ProductItem';
 
 function Products() {
   return (
-    <div>
+    <>
       <Navigation />
       <div className="items_container">
         {productArray.map((elem) => (
@@ -18,7 +18,7 @@ function Products() {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
