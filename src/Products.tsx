@@ -7,7 +7,7 @@ function Products() {
   return (
     <>
       <Navigation />
-      <div className="items_container">
+      <div className="courses_container">
         {productArray.map((elem) => (
           <ProductItem
             key={elem.id}
@@ -15,6 +15,7 @@ function Products() {
             title={elem.title}
             info={elem.info}
             price={elem.price}
+            program={elem.program}
           />
         ))}
       </div>

@@ -2,29 +2,35 @@ import { AiOutlineLoading } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { increment, decrement } from '../slices/cartSlice';
+import { RiArrowDownWideLine } from 'react-icons/ri';
+import { RiArrowUpWideLine } from 'react-icons/ri';
 
 function ProductItem({
   image,
   title,
   info,
   price,
+  program,
 }: {
   image: string;
   title: string;
   info: string;
   price: string;
+  program: string[];
 }) {
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isActive, setIsActive] = useState<boolean>(true);
+  const [isHidden, setIsHidden] = useState<boolean>(true);
 
-  const buttonAdd = `item_button-add ${
-    isActive ? 'item_display-block' : 'item_display-none'
+  const buttonAdd = `course_button-add ${
+    isActive ? 'display-block' : 'display-none'
   }`;
-  const buttonRemove = `item_button-delete ${
-    isActive ? 'item_display-none' : 'item_display-block'
+  const buttonRemove = `course_button-delete ${
+    isActive ? 'display-none' : 'display-block'
   }`;
+  const courseProgram = `course-program_container ${isHidden ? '' : 'open'}`;
 
   const handleClick = () => {
     setIsActive(!isActive);
@@ -41,6 +47,9 @@ function ProductItem({
     };
   }, [image]);
 
+  const toggleArrow = () => {
+    setIsHidden(!isHidden);
+  };
   const toggleCart = () => {
     dispatch(increment());
     handleClick();
@@ -50,30 +59,49 @@ function ProductItem({
     handleClick();
   };
   return (
-    <div className="item_container">
-      <div>
-        <div className="image_container">
-          {isLoading ? (
-            <AiOutlineLoading className="item_icon" />
-          ) : (
-            <img
-              loading="lazy"
-              alt={title}
-              className="item_image"
-              src={image}
-            />
-          )}
+    <div>
+      <div className="course_container">
+        <div>
+          <div className="image_container">
+            {isLoading ? (
+              <AiOutlineLoading className="course_icon" />
+            ) : (
+              <img
+                loading="lazy"
+                alt={title}
+                className="course_image"
+                src={image}
+              />
+            )}
+          </div>
+          <h2>{title}</h2>
+          <p>{info}</p>
+          <h3>{price}</h3>
+          <div className={courseProgram}>
+            <div className="course-program_text">
+              <h2>What you'll learn:</h2>
+              <ul className="text-list_container">
+                {program.map((elem) => (
+                  <li>{elem}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="button-arrow_container">
+            <button className="button-arrow" onClick={toggleArrow}>
+              {isHidden ? <RiArrowDownWideLine /> : <RiArrowUpWideLine />}
+            </button>
+          </div>
         </div>
-        <h2>{title}</h2>
-        <p>{info}</p>
-        <h3>{price}</h3>
+        <div>
+          <button className={buttonAdd} onClick={toggleCart}>
+            Add to cart
+          </button>
+          <button className={buttonRemove} onClick={toggleCartRemove}>
+            Remove from cart
+          </button>
+        </div>
       </div>
-      <button className={buttonAdd} onClick={toggleCart}>
-        Add to cart
-      </button>
-      <button className={buttonRemove} onClick={toggleCartRemove}>
-        Remove from cart
-      </button>
     </div>
   );
 }
