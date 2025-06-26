@@ -798,8 +798,8 @@
 }
 .courses_container .course_container .course-program_container {
   overflow: hidden;
-  transition: max-height 0.5s ease;
-  max-height: 12rem;
+  transition: max-height 0.3s ease;
+  max-height: 8rem;
 }
 .courses_container .course_container .course-program_container .text-list_container {
   list-style-position: inside;

@@ -911,8 +911,8 @@ $greyhover: rgb(223, 223, 223);
     }
     .course-program_container {
       overflow: hidden;
-      transition: max-height 0.5s ease;
-      max-height: 12rem;
+      transition: max-height 0.3s ease;
+      max-height: 8rem;
       .text-list_container {
         list-style-position: inside;
         padding-left: 0;
