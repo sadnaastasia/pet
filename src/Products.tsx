@@ -10,6 +10,7 @@ function Products() {
       <div className="courses_container">
         {productArray.map((elem) => (
           <ProductItem
+            id={elem.id}
             key={elem.id}
             image={elem.image}
             title={elem.title}

@@ -6,12 +6,14 @@ import { RiArrowDownWideLine } from 'react-icons/ri';
 import { RiArrowUpWideLine } from 'react-icons/ri';
 
 function ProductItem({
+  id,
   image,
   title,
   info,
   price,
   program,
 }: {
+  id: number;
   image: string;
   title: string;
   info: string;
@@ -21,19 +23,42 @@ function ProductItem({
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isActive, setIsActive] = useState<boolean>(true);
+  const [isActive, setIsActive] = useState<boolean>(
+    localStorage.getItem(`${id}numberOfItems`) !== null
+      ? localStorage.getItem(`${id}numberOfItems`) === 'true'
+        ? true
+        : false
+      : true
+  );
   const [isHidden, setIsHidden] = useState<boolean>(true);
 
   const buttonAdd = `course_button-add ${
-    isActive ? 'display-block' : 'display-none'
+    (
+      localStorage.getItem(`${id}numberOfItems`) !== null
+        ? localStorage.getItem(`${id}numberOfItems`) === 'true'
+          ? true
+          : false
+        : isActive
+    )
+      ? 'display-block'
+      : 'display-none'
   }`;
   const buttonRemove = `course_button-delete ${
-    isActive ? 'display-none' : 'display-block'
+    (
+      localStorage.getItem(`${id}numberOfItems`) !== null
+        ? localStorage.getItem(`${id}numberOfItems`) === 'true'
+          ? true
+          : false
+        : isActive
+    )
+      ? 'display-none'
+      : 'display-block'
   }`;
   const courseProgram = `course-program_container ${isHidden ? '' : 'open'}`;
 
   const handleClick = () => {
     setIsActive(!isActive);
+    localStorage.setItem(`${id}numberOfItems`, (!isActive).toString());
   };
 
   useEffect(() => {
