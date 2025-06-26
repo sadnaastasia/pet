@@ -31,6 +31,7 @@ function ProductItem({
       : true
   );
   const [isHidden, setIsHidden] = useState<boolean>(true);
+  const [currentIcon, setCurrentIcon] = useState('down');
 
   const buttonAdd = `course_button-add ${
     (
@@ -74,6 +75,7 @@ function ProductItem({
 
   const toggleArrow = () => {
     setIsHidden(!isHidden);
+    setCurrentIcon(currentIcon === 'down' ? 'up' : 'down');
   };
   const toggleCart = () => {
     dispatch(increment());
@@ -114,7 +116,20 @@ function ProductItem({
           </div>
           <div className="button-arrow_container">
             <button className="button-arrow" onClick={toggleArrow}>
-              {isHidden ? <RiArrowDownWideLine /> : <RiArrowUpWideLine />}
+              <RiArrowDownWideLine
+                className="icon"
+                style={{
+                  opacity: currentIcon === 'down' ? 1 : 0,
+                  transition: 'opacity 0.5s ease-in-out',
+                }}
+              />
+              <RiArrowUpWideLine
+                className="icon"
+                style={{
+                  opacity: currentIcon === 'up' ? 1 : 0,
+                  transition: 'opacity 0.5s ease-in-out',
+                }}
+              />
             </button>
           </div>
         </div>

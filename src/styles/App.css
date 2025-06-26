@@ -818,8 +818,14 @@
   color: black;
   border: none;
   border-radius: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
-.courses_container .course_container .button-arrow_container .button-arrow svg {
+.courses_container .course_container .button-arrow_container .button-arrow .icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 2rem;
   height: 2rem;
 }
