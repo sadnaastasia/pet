@@ -5,7 +5,9 @@ export interface CartState {
 }
 
 const initialState: CartState = {
-  value: 0,
+  value: localStorage.getItem('numberOfItems')
+    ? Number(localStorage.getItem('numberOfItems'))
+    : 0,
 };
 
 export const cartSlice = createSlice({
@@ -14,9 +16,13 @@ export const cartSlice = createSlice({
   reducers: {
     increment: (state) => {
       state.value += 1;
+      localStorage.setItem('numberOfItems', state.value.toString());
+      console.log(Number(localStorage.getItem('numberOfItems')));
     },
     decrement: (state) => {
       state.value -= 1;
+      localStorage.setItem('numberOfItems', state.value.toString());
+      console.log(Number(localStorage.getItem('numberOfItems')));
     },
   },
 });
