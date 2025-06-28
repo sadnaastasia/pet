@@ -1,8 +1,9 @@
 import { IoClose } from 'react-icons/io5';
 import 'intl-tel-input/build/css/intlTelInput.css';
-import IntlTelInput from 'intl-tel-input/reactWithUtils';
 import Navigation from '../components /Navigation';
-
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 function Cart() {
   return (
     <>
@@ -31,7 +32,17 @@ function Cart() {
               </div>
               <input placeholder="Anna Brown" className="name-input" />
             </div>
-            <IntlTelInput
+            <PhoneInput
+              country={'by'}
+              autoFormat={true}
+              containerClass={'phone-input_container'}
+              buttonClass={'phone-input_button'}
+              inputClass={'phone-input'}
+              inputProps={{
+                name: 'phone',
+              }}
+            />
+            {/* <IntlTelInput
               initOptions={{
                 initialCountry: 'auto',
                 geoIpLookup: (success, failure) => {
@@ -40,10 +51,10 @@ function Cart() {
                     .then((data) => success(data.country_code))
                     .catch(() => failure());
                 },
-                strictMode: true,
                 separateDialCode: true,
+                strictMode: false,
               }}
-            />
+            /> */}
           </div>
         </div>
       </div>
