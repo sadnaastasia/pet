@@ -1,7 +1,6 @@
-import './styles/App.css';
-import Navigation from './components /Navigation';
-import { productArray } from './data/data';
-import ProductItem from './components /ProductItem';
+import Navigation from '../components /Navigation';
+import { productArray } from '../data/data';
+import ProductItem from '../components /ProductItem';
 
 function Products() {
   return (

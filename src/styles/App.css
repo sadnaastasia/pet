@@ -259,168 +259,6 @@
 .nav .login .login_main .login_welcome {
   margin-bottom: 10px;
 }
-.nav .login .login_main .login-item {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-top: 10px;
-}
-.nav .login .login_main .login-item .input-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  border: #333333 1px solid;
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  padding: 30px 15px;
-}
-.nav .login .login_main .login-item .input-container .login-input {
-  flex-grow: 1;
-  padding: 5px;
-  outline: none;
-  cursor: default;
-  border: none;
-}
-.nav .login .login_main .login-item .input-container .password-eye {
-  background: white;
-  border: none;
-}
-.nav .login .login_main .login-item .input-container .password-eye {
-  cursor: pointer;
-}
-.nav .login .login_main .login-item .login-input_error {
-  border-color: rgb(199, 4, 4);
-}
-.nav .login .login_main .login-item .login-label {
-  font-size: medium;
-  font-weight: 300;
-  color: #9b9b9b;
-  position: absolute;
-  left: 15px;
-  top: 10px;
-  line-height: 40px;
-  transition: 0.3s;
-}
-.nav .login .login_main .login-item .login-label_filled {
-  font-size: medium;
-  font-weight: 300;
-  color: #9b9b9b;
-  position: absolute;
-  left: 15px;
-  top: 5px;
-  line-height: 40px;
-  transition: 0.3s;
-  top: -8px;
-  font-size: 10px;
-  font-size: x-small;
-}
-.nav .login .login_main .login-item .login-label_error {
-  color: rgb(199, 4, 4);
-}
-.nav .login .login_main .login-item .login-input:focus ~ .login-label,
-.nav .login .login_main .login-item .login-input:not(:focus):valid ~ .login-label {
-  top: -8px;
-  font-size: 10px;
-  font-size: x-small;
-}
-.nav .login .login_main .login-item .error-message {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding-left: 5px;
-  font-size: x-small;
-  font-weight: 300;
-  color: rgb(199, 4, 4);
-}
-.nav .login .login_main .login-item .error-message span {
-  margin-left: 2px;
-}
-.nav .login .login_main .login_reset-button {
-  margin-top: 5px;
-  display: flex;
-  justify-content: end;
-  align-items: start;
-}
-.nav .login .login_main .login_pink-button {
-  font-size: small;
-  font-weight: 400;
-  background-color: #ffffff;
-  color: #c776a8;
-  padding: 0;
-  margin: 0;
-  border: none;
-  border-bottom: white 1px solid;
-}
-.nav .login .login_main .login_pink-button:hover {
-  border-bottom: #c776a8 1px solid;
-  cursor: pointer;
-}
-.nav .login .login_main .login_black-button {
-  height: 40px;
-  background-color: black;
-  color: #ffffff;
-  border-radius: 20px;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.nav .login .login_main .login_black-button:hover {
-  cursor: pointer;
-  background-color: rgb(71, 71, 71);
-}
-.nav .login .login_main .login_black-button:disabled {
-  cursor: auto;
-  background-color: rgb(128, 128, 128);
-}
-.nav .login .login_main .login_line {
-  display: flex;
-  align-items: center;
-  font-size: small;
-  font-weight: 400;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.nav .login .login_main .login_line hr {
-  height: 1px;
-  background-color: #cecece;
-  border: none;
-  width: 100%;
-}
-.nav .login .login_main .login_white-button {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  height: 40px;
-  background-color: white;
-  color: black;
-  border-radius: 20px;
-  border: rgb(135, 135, 135) 1px solid;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.nav .login .login_main .login_white-button svg {
-  width: 1rem;
-  height: 1rem;
-}
-.nav .login .login_main .login_white-button:hover {
-  cursor: pointer;
-  border-color: black;
-}
-.nav .login .login_main .login_create-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: small;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.nav .login .login_main .login_create-button span {
-  margin-right: 2px;
-}
 .nav .open {
   visibility: visible;
   right: 0;
@@ -459,6 +297,179 @@
 }
 .nav_grey .nav_buttons .button-menu:hover {
   background-color: #8d8d8d;
+}
+
+.login-item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-top: 10px;
+}
+.login-item .input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: #333333 1px solid;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 30px 15px;
+}
+.login-item .input-container .login-input {
+  flex-grow: 1;
+  padding: 5px;
+  outline: none;
+  cursor: default;
+  border: none;
+}
+.login-item .input-container .password-eye {
+  background: white;
+  border: none;
+}
+.login-item .input-container .password-eye {
+  cursor: pointer;
+}
+.login-item .login-input_error {
+  border-color: rgb(199, 4, 4);
+}
+.login-item .login-label {
+  font-size: medium;
+  font-weight: 300;
+  color: #9b9b9b;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  line-height: 40px;
+  transition: 0.3s;
+}
+.login-item .login-label_filled {
+  font-size: medium;
+  font-weight: 300;
+  color: #9b9b9b;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  line-height: 40px;
+  transition: 0.3s;
+  top: -8px;
+  font-size: 10px;
+  font-size: x-small;
+}
+.login-item .login-label_error {
+  color: rgb(199, 4, 4);
+}
+.login-item .login-input:focus ~ .login-label,
+.login-item .login-input:not(:focus):valid ~ .login-label {
+  top: -8px;
+  font-size: 10px;
+  font-size: x-small;
+}
+.login-item .error-message {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 5px;
+  font-size: x-small;
+  font-weight: 300;
+  color: rgb(199, 4, 4);
+}
+.login-item .error-message span {
+  margin-left: 2px;
+}
+
+.login_reset-button {
+  margin-top: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+
+.login_pink-button {
+  font-size: small;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #c776a8;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: white 1px solid;
+}
+
+.login_pink-button:hover {
+  border-bottom: #c776a8 1px solid;
+  cursor: pointer;
+}
+
+.login_black-button {
+  height: 40px;
+  background-color: black;
+  color: #ffffff;
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.login_black-button:hover {
+  cursor: pointer;
+  background-color: rgb(71, 71, 71);
+}
+
+.login_black-button:disabled {
+  cursor: auto;
+  background-color: rgb(128, 128, 128);
+}
+
+.login_line {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login_line hr {
+  height: 1px;
+  background-color: #cecece;
+  border: none;
+  width: 100%;
+}
+
+.login_white-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  border: rgb(135, 135, 135) 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login_white-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.login_white-button:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
+.login_create-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.login_create-button span {
+  margin-right: 2px;
 }
 
 .beckoning-info {
@@ -871,6 +882,88 @@
     transform: rotate(360deg);
   }
 }
+.cart_container {
+  padding: 40px 150px;
+  display: flex;
+  justify-content: center;
+}
+.cart_container .cart_outer {
+  border: #b492a8 0.1rem solid;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: auto;
+  width: 80%;
+  padding: 20px 80px;
+}
+.cart_container .cart_outer .cart_item {
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: #aca4aa 1px solid;
+  border-bottom: #aca4aa 1px solid;
+}
+.cart_container .cart_outer .cart_item .item_title {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.cart_container .cart_outer .cart_item .item_price {
+  margin-right: 30px;
+}
+.cart_container .cart_outer .cart_item img {
+  height: 10rem;
+  width: 15rem;
+}
+.cart_container .cart_outer .cart_item .item_button {
+  background-color: white;
+  border: rgb(223, 223, 223) 0.1rem solid;
+  padding: 3px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_container .cart_outer .cart_item .item_button svg {
+  width: 2rem;
+  height: 2rem;
+}
+.cart_container .cart_outer .cart_item .item_button:hover {
+  cursor: pointer;
+  background-color: rgb(223, 223, 223);
+}
+.cart_container .cart_outer .cart_sum {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: end;
+}
+.cart_container .cart_outer .cart_inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart_container .cart_outer .cart_inputs input {
+  box-sizing: border-box;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 20px;
+  padding: 0;
+  border: #aca4aa 1px solid;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.cart_container .cart_outer .cart_inputs .name-input_container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.cart_container .cart_outer .cart_inputs .name-input_container .name-label_container {
+  padding-left: 10px;
+}
+
 @media (max-width: 1280px) and (max-height: 800px) {
   .main-course {
     padding: 80px 350px;

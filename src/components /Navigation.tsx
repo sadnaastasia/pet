@@ -9,6 +9,7 @@ import { SiApple } from 'react-icons/si';
 import { FaCartShopping } from 'react-icons/fa6';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../store/store';
+import { Link } from 'react-router';
 
 function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -50,12 +51,14 @@ function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
       ></div>
       <div className="nav_logo">CBT</div>
       <div className="nav_buttons">
-        <button className="button-cart">
-          <FaCartShopping />
-          <div className="button-cart_number">
-            <span>{numberOfItems}</span>
-          </div>
-        </button>
+        <Link className="no-underline" to="/cart">
+          <button className="button-cart">
+            <FaCartShopping />
+            <div className="button-cart_number">
+              <span>{numberOfItems}</span>
+            </div>
+          </button>
+        </Link>
         <button className="button-login" onClick={toggleLogIn}>
           Log in
         </button>

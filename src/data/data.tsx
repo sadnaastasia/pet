@@ -162,7 +162,7 @@ export const courseSocial: Array<string> = [
 ];
 
 export const courseCriminal: Array<string> = [
-  "What you'll learn: The reasons for criminal behaviour.",
+  'The reasons for criminal behaviour.',
   'Types of crime: burglary, murder, serial killing, etc.',
   'Personality disorders & crime.',
   'Common characteristics of criminals.',
