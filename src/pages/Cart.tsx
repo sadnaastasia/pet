@@ -26,35 +26,58 @@ function Cart() {
             <span>Total: 1000$</span>
           </div>
           <div className="cart_inputs">
-            <div className="name-input_container">
-              <div className="name-label_container">
-                <label>Name and Surname</label>
+            <div>
+              <div className="name-input_container">
+                <div className="name-label_container">
+                  <label>Name and Surname</label>
+                </div>
+                <input placeholder="Anna Brown" className="name-input" />
               </div>
-              <input placeholder="Anna Brown" className="name-input" />
+              <PhoneInput
+                country={'by'}
+                autoFormat={true}
+                containerClass={'phone-input_container'}
+                buttonClass={'phone-input_button'}
+                inputClass={'phone-input'}
+                inputProps={{
+                  name: 'phone',
+                }}
+              />
+              <fieldset className="contact">
+                <legend>Choose how to contact you:</legend>
+                <div>
+                  <input type="radio" id="telegram" name="contact" />
+                  <label htmlFor="telegram">Telegram</label>
+                </div>
+                <div>
+                  <input type="radio" id="whatsapp" name="contact" />
+                  <label htmlFor="whatsapp">Whatsapp</label>
+                </div>
+                <div>
+                  <input type="radio" id="imessage" name="contact" />
+                  <label htmlFor="imessage">iMessage</label>
+                </div>
+              </fieldset>
+              <div className="remember">
+                <input type="checkbox" id="remember" name="remember" />
+                <label htmlFor="remember">
+                  Remember contacts in browser for repeat purchase
+                </label>
+              </div>
+              <div className="name-input_container">
+                <div className="name-label_container">
+                  <label>Promo</label>
+                </div>
+                <input className="name-input" />
+              </div>
+              <div className="cart_sum">
+                <span>Subtotal: 1000$</span>
+              </div>
+              <div className="cart_sum">
+                <span>Total: 1000$</span>
+              </div>
+              <button className="cart-button">Contact me</button>
             </div>
-            <PhoneInput
-              country={'by'}
-              autoFormat={true}
-              containerClass={'phone-input_container'}
-              buttonClass={'phone-input_button'}
-              inputClass={'phone-input'}
-              inputProps={{
-                name: 'phone',
-              }}
-            />
-            {/* <IntlTelInput
-              initOptions={{
-                initialCountry: 'auto',
-                geoIpLookup: (success, failure) => {
-                  fetch('https://ipapi.co/json')
-                    .then((res) => res.json())
-                    .then((data) => success(data.country_code))
-                    .catch(() => failure());
-                },
-                separateDialCode: true,
-                strictMode: false,
-              }}
-            /> */}
           </div>
         </div>
       </div>

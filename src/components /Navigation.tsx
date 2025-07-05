@@ -49,7 +49,12 @@ function Navigation({ isScrolled = '' }: { isScrolled?: string }) {
       <div
         className={`${isMenuOpen || isLogInOpen ? 'overlay' : 'overlay-none'}`}
       ></div>
-      <div className="nav_logo">CBT</div>
+      <div className="nav_main">
+        <div className="nav_logo">CBT</div>
+        <Link className="no-underline" to="/">
+          <button className="nav_main-button">Main page</button>
+        </Link>
+      </div>
       <div className="nav_buttons">
         <Link className="no-underline" to="/cart">
           <button className="button-cart">
