@@ -4,34 +4,47 @@ import Navigation from '../components /Navigation';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { useSelector } from 'react-redux';
+import { type RootState } from '../store/store';
+import CartItem from '../components /CartItem';
+
 function Cart() {
+  const productsList = useSelector((state: RootState) =>
+    state.cart.cartItems.slice().reverse()
+  );
   return (
     <>
       <Navigation />
       <div className="cart_container">
         <div className="cart_outer">
           <h1>Cart</h1>
-          <div className="cart_item">
-            <img loading="lazy" src="../../product1.webp" />
-            <h3 className="item_title">
-              Theory and Practice of Cognitive-Behavioral Therapy: a clinical
-              course with pre-accreditation status{' '}
-            </h3>
-            <h4 className="item_price">1000$</h4>
-            <button className="item_button">
-              <IoClose />
-            </button>
-          </div>
+          {productsList.map((item) => (
+            <CartItem
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              image={item.image}
+              price={item.price}
+            />
+          ))}
           <div className="cart_sum">
-            <span>Total: 1000$</span>
+            <span>
+              Total:{' '}
+              {productsList.reduce(
+                (sum, item) =>
+                  parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                0
+              )}
+              $
+            </span>
           </div>
-          <div className="cart_inputs">
+          <div className="cart_main">
             <div>
-              <div className="name-input_container">
-                <div className="name-label_container">
+              <div className="input_container">
+                <div className="label_container">
                   <label>Name and Surname</label>
                 </div>
-                <input placeholder="Anna Brown" className="name-input" />
+                <input placeholder="Anna Brown" />
               </div>
               <PhoneInput
                 country={'by'}
@@ -64,11 +77,11 @@ function Cart() {
                   Remember contacts in browser for repeat purchase
                 </label>
               </div>
-              <div className="name-input_container">
-                <div className="name-label_container">
+              <div className="input_container">
+                <div className="label_container">
                   <label>Promo</label>
                 </div>
-                <input className="name-input" />
+                <input />
               </div>
               <div className="cart_sum">
                 <span>Subtotal: 1000$</span>

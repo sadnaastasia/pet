@@ -1,9 +1,10 @@
 import { AiOutlineLoading } from 'react-icons/ai';
 import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { increment, decrement } from '../slices/cartSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, deleteItem } from '../slices/cartSlice';
 import { RiArrowDownWideLine } from 'react-icons/ri';
 import { RiArrowUpWideLine } from 'react-icons/ri';
+import { type RootState } from '../store/store';
 
 function ProductItem({
   id,
@@ -21,17 +22,16 @@ function ProductItem({
   program: string[];
 }) {
   const dispatch = useDispatch();
+  const productsList = useSelector((state: RootState) =>
+    state.cart.cartItems.slice().reverse()
+  );
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isActive, setIsActive] = useState<boolean>(
-    localStorage.getItem(`${id}numberOfItems`) !== null
-      ? localStorage.getItem(`${id}numberOfItems`) === 'true'
-        ? true
-        : false
-      : true
-  );
   const [isHidden, setIsHidden] = useState<boolean>(true);
   const [currentIcon, setCurrentIcon] = useState('down');
+
+  const isInCart = productsList.some((item) => item.id === id);
+  const [isActive, setIsActive] = useState<boolean>(!isInCart);
 
   const buttonAdd = `course_button-add ${
     (
@@ -57,11 +57,6 @@ function ProductItem({
   }`;
   const courseProgram = `course-program_container ${isHidden ? '' : 'open'}`;
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-    localStorage.setItem(`${id}numberOfItems`, (!isActive).toString());
-  };
-
   useEffect(() => {
     const img = new Image();
     img.src = image;
@@ -77,12 +72,16 @@ function ProductItem({
     setIsHidden(!isHidden);
     setCurrentIcon(currentIcon === 'down' ? 'up' : 'down');
   };
+  const handleClick = () => {
+    setIsActive(!isActive);
+    localStorage.setItem(`${id}numberOfItems`, (!isActive).toString());
+  };
   const toggleCart = () => {
-    dispatch(increment());
+    dispatch(addItem({ id, image, title, info, price }));
     handleClick();
   };
   const toggleCartRemove = () => {
-    dispatch(decrement());
+    dispatch(deleteItem({ id, image, title, info, price }));
     handleClick();
   };
   return (

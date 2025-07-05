@@ -1023,7 +1023,7 @@ $greyhover: rgb(223, 223, 223);
     height: auto;
     width: 80%;
     padding: 20px 80px;
-    .cart_item {
+    .cart-item {
       font-size: small;
       display: flex;
       justify-content: space-between;
@@ -1066,17 +1066,17 @@ $greyhover: rgb(223, 223, 223);
       display: flex;
       justify-content: end;
     }
-    .cart_inputs {
+    .cart_main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .name-input_container {
+      .input_container {
         margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        .name-input {
+        input {
           box-sizing: border-box;
           width: 30rem;
           height: 3rem;
@@ -1085,7 +1085,7 @@ $greyhover: rgb(223, 223, 223);
           margin-bottom: 10px;
           padding-left: 20px;
         }
-        .name-label_container {
+        .label_container {
           padding-left: 10px;
         }
       }
