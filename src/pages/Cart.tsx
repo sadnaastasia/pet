@@ -84,10 +84,26 @@ function Cart() {
                 <input />
               </div>
               <div className="cart_sum">
-                <span>Subtotal: 1000$</span>
+                <span>
+                  Subtotal:{' '}
+                  {productsList.reduce(
+                    (sum, item) =>
+                      parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                    0
+                  )}
+                  $
+                </span>
               </div>
               <div className="cart_sum">
-                <span>Total: 1000$</span>
+                <span>
+                  Total:{' '}
+                  {productsList.reduce(
+                    (sum, item) =>
+                      parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                    0
+                  )}
+                  $
+                </span>
               </div>
               <button className="cart-button">Contact me</button>
             </div>
