@@ -1,4 +1,3 @@
-import { IoClose } from 'react-icons/io5';
 import 'intl-tel-input/build/css/intlTelInput.css';
 import Navigation from '../components /Navigation';
 import 'react-phone-number-input/style.css';
@@ -8,17 +7,25 @@ import { useSelector } from 'react-redux';
 import { type RootState } from '../store/store';
 import CartItem from '../components /CartItem';
 
+interface ProductItemShort {
+  id: number;
+  image: string;
+  title: string;
+  price: string;
+}
+
 function Cart() {
-  const productsList = useSelector((state: RootState) =>
-    state.cart.cartItems.slice().reverse()
-  );
+  const productsList = useSelector((state: RootState) => state.cart.cartItems)
+    .slice()
+    .reverse();
+
   return (
     <>
       <Navigation />
       <div className="cart_container">
         <div className="cart_outer">
           <h1>Cart</h1>
-          {productsList.map((item) => (
+          {productsList.map((item: ProductItemShort) => (
             <CartItem
               key={item.id}
               id={item.id}
@@ -31,7 +38,7 @@ function Cart() {
             <span>
               Total:{' '}
               {productsList.reduce(
-                (sum, item) =>
+                (sum: number, item: ProductItemShort) =>
                   parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
                 0
               )}
@@ -87,7 +94,7 @@ function Cart() {
                 <span>
                   Subtotal:{' '}
                   {productsList.reduce(
-                    (sum, item) =>
+                    (sum: number, item: ProductItemShort) =>
                       parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
                     0
                   )}
@@ -98,7 +105,7 @@ function Cart() {
                 <span>
                   Total:{' '}
                   {productsList.reduce(
-                    (sum, item) =>
+                    (sum: number, item: ProductItemShort) =>
                       parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
                     0
                   )}

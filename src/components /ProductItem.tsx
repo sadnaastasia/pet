@@ -22,16 +22,13 @@ function ProductItem({
   program: string[];
 }) {
   const dispatch = useDispatch();
-  const productsList = useSelector((state: RootState) =>
-    state.cart.cartItems.slice().reverse()
+  const buttonsActivity = useSelector(
+    (state: RootState) => state.cart.buttonsActivity
   );
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isHidden, setIsHidden] = useState<boolean>(true);
   const [currentIcon, setCurrentIcon] = useState('down');
-
-  const isInCart = productsList.some((item) => item.id === id);
-  const [isActive, setIsActive] = useState<boolean>(!isInCart);
 
   const buttonAdd = `course_button-add ${
     (
@@ -39,7 +36,7 @@ function ProductItem({
         ? localStorage.getItem(`${id}numberOfItems`) === 'true'
           ? true
           : false
-        : isActive
+        : buttonsActivity.find((item) => item.id === id)?.isActive
     )
       ? 'display-block'
       : 'display-none'
@@ -50,7 +47,7 @@ function ProductItem({
         ? localStorage.getItem(`${id}numberOfItems`) === 'true'
           ? true
           : false
-        : isActive
+        : buttonsActivity.find((item) => item.id === id)?.isActive
     )
       ? 'display-none'
       : 'display-block'
@@ -72,17 +69,12 @@ function ProductItem({
     setIsHidden(!isHidden);
     setCurrentIcon(currentIcon === 'down' ? 'up' : 'down');
   };
-  const handleClick = () => {
-    setIsActive(!isActive);
-    localStorage.setItem(`${id}numberOfItems`, (!isActive).toString());
-  };
+
   const toggleCart = () => {
     dispatch(addItem({ id, image, title, info, price }));
-    handleClick();
   };
   const toggleCartRemove = () => {
     dispatch(deleteItem({ id, image, title, info, price }));
-    handleClick();
   };
   return (
     <div>

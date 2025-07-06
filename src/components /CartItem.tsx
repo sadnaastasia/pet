@@ -14,9 +14,9 @@ function CartItem({
   price: string;
 }) {
   const dispatch = useDispatch();
+
   const toggleCartRemove = () => {
     dispatch(deleteItem({ id, image, title, price }));
-    localStorage.setItem(`${id}numberOfItems`, 'false');
   };
   return (
     <div className="cart-item">
