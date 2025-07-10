@@ -1,6 +1,8 @@
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import { RiBook2Line } from 'react-icons/ri';
 import { Link } from 'react-router';
+import cycle from '../../public/cycle.jpg';
+import video from '../../public/video.mp4';
 
 function AboutMainCourse() {
   return (
@@ -10,7 +12,7 @@ function AboutMainCourse() {
           <div className="item1_container">
             <div className="item1_video-container">
               <video autoPlay muted loop>
-                <source src="../../public/video.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
               </video>
               <button className="item1_button">Try for free</button>
             </div>
@@ -23,7 +25,7 @@ function AboutMainCourse() {
               out of the cycle
             </h2>
           </div>
-          <img src="../../public/cycle.jpg" className="image" alt="" />
+          <img src={cycle} className="image" alt="" />
         </div>
         <div className="content_item3">
           <Link className="no-underline" to="/maincourse">

@@ -9,6 +9,15 @@ import { MdChildCare } from 'react-icons/md';
 import { BsSpeedometer } from 'react-icons/bs';
 import type { ReactNode } from 'react';
 import product1 from '../../public/product1.webp';
+import product2 from '../../public/product2.webp';
+import product3 from '../../public/product3.webp';
+import product4 from '../../public/product4.webp';
+import product5 from '../../public/product5.webp';
+import product6 from '../../public/product6.webp';
+import product7 from '../../public/product7.webp';
+import product8 from '../../public/product8.webp';
+import product9 from '../../public/product9.webp';
+import product10 from '../../public/product10.webp';
 
 interface LineItem {
   id: number;
@@ -233,7 +242,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 2,
-    image: '../public/product2.webp',
+    image: product2,
     title: 'Person-Centred Counselling Course (Certification Program)',
     info: 'Learn the essentials of person-centred psychology, counselling skills, communication + active listening to help others.',
     price: '200$',
@@ -241,7 +250,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 3,
-    image: '../public/product3.webp',
+    image: product3,
     title: 'PSYCHOLOGY: Stress & Anxiety Management (FULLY ACCREDITED)',
     info: 'CERTIFIED Course on Psychology of Anxiety-related Disorders: Generalised & Social',
     price: '250$',
@@ -249,7 +258,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 4,
-    image: '../public/product4.webp',
+    image: product4,
     title: 'Learn Social Psychology',
     info: 'Understand How People Think, Feel, and Behave in this Complete Introduction to Social Psychology',
     price: '100$',
@@ -257,7 +266,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 5,
-    image: '../public/product5.webp',
+    image: product5,
     title: 'CRIMINAL PSYCHOLOGY: Crime & Personality Disorders',
     info: 'FULLY ACCREDITED & CERTIFIED Course on Delinquent Behaviour & Crime Psychology',
     price: '450$',
@@ -265,7 +274,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 6,
-    image: '../public/product6.webp',
+    image: product6,
     title: 'Schema Therapy Practitioner Course',
     info: 'Schema Therapy Essentials: Rewire Childhood Patterns & Build Unshakable Emotional Freedom',
     price: '170$',
@@ -273,7 +282,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 7,
-    image: '../public/product7.webp',
+    image: product7,
     title: 'Organizational Psychology and Human Resource Management',
     info: 'Certification in Organizational and Industrial Psychology From an HRM Professional. A Perfect Human Resource MGT Course',
     price: '70$',
@@ -281,7 +290,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 8,
-    image: '../public/product8.webp',
+    image: product8,
     title: 'Personality Disorders: Master the Psychology of All 10 Types',
     info: 'A comprehensive review of everything in the DSM on personality disorders. Narcissistic, Borderline, Schizoid, and more!',
     price: '300$',
@@ -289,7 +298,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 9,
-    image: '../public/product9.webp',
+    image: product9,
     title: 'Child Psychology: Advanced Level - (FULLY ACCREDITED)',
     info: "CERTIFIED Course on Developmental Milestones & Child's Emotional Behaviour",
     price: '550$',
@@ -297,7 +306,7 @@ export const productArray: Array<ProductItem> = [
   },
   {
     id: 10,
-    image: '../public/product10.webp',
+    image: product10,
     title: 'Cognitive Behavioural Therapy (CBT) for Eating Disorders',
     info: 'FULLY ACCREDITED & CERTIFIED Course on Diagnose & CBT Treatment of Anorexia, Bulimia, Binge Eating',
     price: '700$',
