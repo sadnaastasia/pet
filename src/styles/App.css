@@ -88,6 +88,7 @@
   border-radius: 20rem;
   padding: 0.6rem 0.8rem;
   box-shadow: 1px 1px 10px rgba(221, 221, 221, 0.5);
+  color: black;
 }
 .nav .nav_main .nav_main-button:hover {
   cursor: pointer;
@@ -111,6 +112,7 @@
 .nav .nav_buttons .button-cart svg {
   width: 1.4rem;
   height: 1.4rem;
+  fill: black;
 }
 .nav .nav_buttons .button-cart .button-cart_number {
   padding: 0.3rem;
@@ -124,6 +126,7 @@
   height: 0.8rem;
   bottom: -0.1rem;
   right: -0.3rem;
+  color: black;
 }
 .nav .nav_buttons .button-cart:hover {
   cursor: pointer;
@@ -137,6 +140,7 @@
   padding: 0.6rem 0.8rem;
   margin-right: 0.5rem;
   box-shadow: 1px 1px 10px rgba(221, 221, 221, 0.5);
+  color: black;
 }
 .nav .nav_buttons .button-login:hover {
   cursor: pointer;
@@ -150,6 +154,7 @@
   background-color: transparent;
   border: none;
   padding: 0.5rem;
+  color: black;
 }
 .nav .nav_buttons .button-menu svg {
   width: 1.5rem;
@@ -194,6 +199,7 @@
 .nav .side-menu .side-menu_nav .side-menu_exit-button svg {
   width: 2rem;
   height: 2rem;
+  fill: black;
 }
 .nav .side-menu .side-menu_nav .side-menu_exit-button:hover {
   cursor: pointer;
@@ -215,11 +221,13 @@
   border-radius: 10px;
   background-color: white;
   padding: 5px 20px 5px 20px;
+  color: black;
 }
 .nav .side-menu .side-menu_button .button_elem {
   padding: 0px 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+  fill: black;
 }
 .nav .side-menu .side-menu_button:hover {
   cursor: pointer;
@@ -256,6 +264,7 @@
   padding: 0.5rem;
 }
 .nav .login .login_exit-button svg {
+  fill: black;
   width: 2rem;
   height: 2rem;
 }
@@ -641,6 +650,7 @@
   width: 10rem;
   height: 3rem;
   margin-right: 7px;
+  color: black;
 }
 .main-course .main-course_buttons .main-course_buttons_white:hover {
   cursor: pointer;
@@ -654,6 +664,7 @@
   height: 3rem;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  color: black;
 }
 .main-course .main-course_buttons .main-course_buttons_blur:hover {
   cursor: pointer;
@@ -953,6 +964,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 .cart_container .cart_outer .cart-item .item_button svg {
   width: 2rem;
@@ -1087,6 +1099,7 @@
   justify-content: start;
   margin-bottom: 10px;
   border-bottom: transparent 1px solid;
+  color: black;
 }
 .footer_container .footer button:hover {
   border-color: black;
