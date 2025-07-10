@@ -4,6 +4,7 @@ import BeckoningInfo from '../components /BeckoningInfo';
 import MainCourse from '../components /MainCourse';
 import AboutMainCourse from '../components /AboutMainCourse';
 import { useState, useEffect } from 'react';
+import Footer from '../components /Footer';
 
 function Main() {
   const [isScrolled, setIsScrolled] = useState<string>('');
@@ -30,6 +31,10 @@ function Main() {
       <BeckoningInfo />
       <MainCourse />
       <AboutMainCourse />
+      <Footer />
+      <div className="biglogo_container">
+        <span className="biglogo">CBT</span>
+      </div>
     </div>
   );
 }

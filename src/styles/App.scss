@@ -775,6 +775,7 @@ $greyhover: rgb(223, 223, 223);
   padding: 50px 110px;
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
   .about-course_content {
     padding: 0;
     width: 100%;
@@ -1031,12 +1032,18 @@ $greyhover: rgb(223, 223, 223);
       border-top: #aca4aa 1px solid;
       border-bottom: #aca4aa 1px solid;
       margin-bottom: 20px;
-      .item_title {
-        margin-left: 30px;
-        margin-right: 30px;
-      }
-      .item_price {
-        margin-right: 30px;
+      .item-main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item_title {
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+        .item_price {
+          margin-right: 30px;
+        }
       }
       img {
         height: 10rem;
@@ -1160,6 +1167,51 @@ $greyhover: rgb(223, 223, 223);
         background-color: #aca4aa;
       }
     }
+  }
+}
+
+.footer_container {
+  background-color: $pink;
+  padding: 80px 150px;
+  margin-bottom: 0;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer_section {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    button {
+      width: auto;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      padding-right: 0;
+      display: flex;
+      justify-content: start;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      border-bottom: black 1px solid;
+      cursor: pointer;
+    }
+  }
+}
+
+.biglogo_container {
+  background-color: $pink;
+  height: 90vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  .biglogo {
+    font-size: 90vh;
+    font-weight: 800;
+    letter-spacing: -30px;
   }
 }
 

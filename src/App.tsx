@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
 import Cart from './pages/Cart';
+import MainCoursePage from './pages/MainCoursePage';
 
 const Wrapper = ({ children }: { children: React.ReactElement }) => {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
       <Wrapper>
         <Routes>
           <Route path="/" element={<Main />}></Route>
+          <Route path="/maincourse" element={<MainCoursePage />}></Route>
           <Route path="/products" element={<Products />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
         </Routes>

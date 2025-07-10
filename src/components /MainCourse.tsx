@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 function MainCourse() {
   return (
     <div className="main-course">
@@ -7,7 +9,9 @@ function MainCourse() {
       </h1>
       <div className="main-course_buttons">
         <button className="main-course_buttons_white">Get started</button>
-        <button className="main-course_buttons_blur">More info</button>
+        <Link className="no-underline" to="/maincourse">
+          <button className="main-course_buttons_blur">More info</button>
+        </Link>
       </div>
     </div>
   );

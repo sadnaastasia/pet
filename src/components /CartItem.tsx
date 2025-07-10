@@ -21,8 +21,10 @@ function CartItem({
   return (
     <div className="cart-item">
       <img loading="lazy" src={image} />
-      <h3 className="item_title">{title}</h3>
-      <h4 className="item_price">{price}</h4>
+      <div className="item-main">
+        <h3 className="item_title">{title}</h3>
+        <h4 className="item_price">{price}</h4>
+      </div>
       <button className="item_button" onClick={toggleCartRemove}>
         <IoClose />
       </button>

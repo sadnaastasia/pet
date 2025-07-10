@@ -26,12 +26,14 @@ function AboutMainCourse() {
           <img src="../../public/cycle.jpg" className="image" alt="" />
         </div>
         <div className="content_item3">
-          <button className="item3_button">
-            <div className="button_info">
-              <IoInformationCircleOutline />
-              <span>Learn more about the course</span>
-            </div>
-          </button>
+          <Link className="no-underline" to="/maincourse">
+            <button className="item3_button">
+              <div className="button_info">
+                <IoInformationCircleOutline />
+                <span>Learn more about the course</span>
+              </div>
+            </button>
+          </Link>
           <hr />
           <Link className="no-underline" to="/products">
             <button className="item3_button">

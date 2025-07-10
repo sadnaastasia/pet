@@ -1,6 +1,7 @@
 import Navigation from '../components /Navigation';
 import { productArray } from '../data/data';
 import ProductItem from '../components /ProductItem';
+import Footer from '../components /Footer';
 
 function Products() {
   return (
@@ -19,6 +20,7 @@ function Products() {
           />
         ))}
       </div>
+      <Footer />
     </>
   );
 }

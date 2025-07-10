@@ -6,6 +6,7 @@ import 'react-phone-input-2/lib/style.css';
 import { useSelector } from 'react-redux';
 import { type RootState } from '../store/store';
 import CartItem from '../components /CartItem';
+import Footer from '../components /Footer';
 
 interface ProductItemShort {
   id: number;
@@ -117,6 +118,7 @@ function Cart() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
