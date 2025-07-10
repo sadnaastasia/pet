@@ -8,6 +8,7 @@ import { MdOutlineSelfImprovement } from 'react-icons/md';
 import { MdChildCare } from 'react-icons/md';
 import { BsSpeedometer } from 'react-icons/bs';
 import type { ReactNode } from 'react';
+import product1 from '../../public/product1.webp';
 
 interface LineItem {
   id: number;
@@ -223,7 +224,7 @@ export const courseEatingDisorders: Array<string> = [
 export const productArray: Array<ProductItem> = [
   {
     id: 1,
-    image: '../public/product1.webp',
+    image: product1,
     title:
       'Theory and Practice of Cognitive-Behavioral Therapy: a clinical course with pre-accreditation status ',
     info: 'Learn how Cognitive Behavioral Therapy (CBT) equips people to improve their emotional intelligence + mental well-being.',
