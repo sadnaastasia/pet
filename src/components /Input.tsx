@@ -113,7 +113,11 @@ function Input({
             onClick={handleEyeClick}
             onBlur={handleBlur}
           >
-            {isEye ? <LuEye /> : <LuEyeClosed />}
+            {isEye ? (
+              <LuEye className="eye" />
+            ) : (
+              <LuEyeClosed className="eye" />
+            )}
           </button>
         ) : (
           ''

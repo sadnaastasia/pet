@@ -356,7 +356,9 @@
 .login-item .input-container .password-eye {
   background: white;
   border: none;
-  fill: black;
+}
+.login-item .input-container .password-eye .eye {
+  stroke: black;
 }
 .login-item .input-container .password-eye {
   cursor: pointer;

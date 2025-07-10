@@ -366,7 +366,9 @@ $greyhover: rgb(223, 223, 223);
     .password-eye {
       background: white;
       border: none;
-      fill: black;
+      .eye {
+        stroke: black;
+      }
     }
     .password-eye {
       cursor: pointer;
