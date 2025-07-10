@@ -5,7 +5,7 @@ function MainCoursePage() {
   return (
     <>
       <Navigation />
-      <div>
+      <div className="main-course-page_container">
         <h1>
           Theory and Practice of Cognitive-Behavioral Therapy: a clinical course
           with pre-accreditation status
@@ -25,7 +25,7 @@ function MainCoursePage() {
           British Association of Behavioural & Cognitive Psychotherapies at
           Level 1.
         </p>
-        <ul>
+        <ul className="main-course-page_links">
           <h3>Quick links</h3>
           <li>
             <a href="">Who is this course for?</a>
