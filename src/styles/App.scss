@@ -1298,6 +1298,7 @@ $greyhover: rgb(223, 223, 223);
       }
     }
     .nav {
+      box-sizing: border-box;
       .side-menu {
         padding: 0;
         right: -100%;

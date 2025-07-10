@@ -1184,6 +1184,9 @@
   .running-line .running-line_marquee .running-line_track {
     width: 1200%;
   }
+  .nav {
+    box-sizing: border-box;
+  }
   .nav .side-menu {
     padding: 0;
     right: -100%;
