@@ -94,27 +94,29 @@ function Cart() {
               </div>
               <input />
             </div>
-            <div className="cart_sum">
-              <span>
-                Subtotal:{' '}
-                {productsList.reduce(
-                  (sum: number, item: ProductItemShort) =>
-                    parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
-                  0
-                )}
-                $
-              </span>
-            </div>
-            <div className="cart_sum">
-              <span>
-                Total:{' '}
-                {productsList.reduce(
-                  (sum: number, item: ProductItemShort) =>
-                    parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
-                  0
-                )}
-                $
-              </span>
+            <div className="cart_sum-container">
+              <div className="cart_sum">
+                <span>
+                  Subtotal:{' '}
+                  {productsList.reduce(
+                    (sum: number, item: ProductItemShort) =>
+                      parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                    0
+                  )}
+                  $
+                </span>
+              </div>
+              <div className="cart_sum">
+                <span>
+                  Total:{' '}
+                  {productsList.reduce(
+                    (sum: number, item: ProductItemShort) =>
+                      parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                    0
+                  )}
+                  $
+                </span>
+              </div>
             </div>
             <button className="cart-button">Contact me</button>
           </div>
