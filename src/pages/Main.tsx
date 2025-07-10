@@ -32,9 +32,6 @@ function Main() {
       <MainCourse />
       <AboutMainCourse />
       <Footer />
-      <div className="biglogo_container">
-        <span className="biglogo">CBT</span>
-      </div>
     </div>
   );
 }
