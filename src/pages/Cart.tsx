@@ -19,22 +19,26 @@ function Cart() {
   const productsList = useSelector((state: RootState) => state.cart.cartItems)
     .slice()
     .reverse();
-
+  const text = 'Oops... Your cart is empty:(';
   return (
     <>
       <Navigation />
       <div className="cart_container">
         <div className="cart_outer">
           <h1>Cart</h1>
-          {productsList.map((item: ProductItemShort) => (
-            <CartItem
-              key={item.id}
-              id={item.id}
-              title={item.title}
-              image={item.image}
-              price={item.price}
-            />
-          ))}
+          {productsList.length > 0 ? (
+            productsList.map((item: ProductItemShort) => (
+              <CartItem
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                image={item.image}
+                price={item.price}
+              />
+            ))
+          ) : (
+            <h2>{text}</h2>
+          )}
           <div className="cart_sum">
             <span>
               Total:{' '}
