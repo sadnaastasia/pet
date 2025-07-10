@@ -47,74 +47,72 @@ function Cart() {
             </span>
           </div>
           <div className="cart_main">
-            <div>
-              <div className="input_container">
-                <div className="label_container">
-                  <label>Name and Surname</label>
-                </div>
-                <input placeholder="Anna Brown" />
+            <div className="input_container">
+              <div className="label_container">
+                <label>Name and Surname</label>
               </div>
-              <PhoneInput
-                country={'by'}
-                autoFormat={true}
-                containerClass={'phone-input_container'}
-                buttonClass={'phone-input_button'}
-                inputClass={'phone-input'}
-                inputProps={{
-                  name: 'phone',
-                }}
-              />
-              <fieldset className="contact">
-                <legend>Choose how to contact you:</legend>
-                <div>
-                  <input type="radio" id="telegram" name="contact" />
-                  <label htmlFor="telegram">Telegram</label>
-                </div>
-                <div>
-                  <input type="radio" id="whatsapp" name="contact" />
-                  <label htmlFor="whatsapp">Whatsapp</label>
-                </div>
-                <div>
-                  <input type="radio" id="imessage" name="contact" />
-                  <label htmlFor="imessage">iMessage</label>
-                </div>
-              </fieldset>
-              <div className="remember">
-                <input type="checkbox" id="remember" name="remember" />
-                <label htmlFor="remember">
-                  Remember contacts in browser for repeat purchase
-                </label>
-              </div>
-              <div className="input_container">
-                <div className="label_container">
-                  <label>Promo</label>
-                </div>
-                <input />
-              </div>
-              <div className="cart_sum">
-                <span>
-                  Subtotal:{' '}
-                  {productsList.reduce(
-                    (sum: number, item: ProductItemShort) =>
-                      parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
-                    0
-                  )}
-                  $
-                </span>
-              </div>
-              <div className="cart_sum">
-                <span>
-                  Total:{' '}
-                  {productsList.reduce(
-                    (sum: number, item: ProductItemShort) =>
-                      parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
-                    0
-                  )}
-                  $
-                </span>
-              </div>
-              <button className="cart-button">Contact me</button>
+              <input placeholder="Anna Brown" />
             </div>
+            <PhoneInput
+              country={'by'}
+              autoFormat={true}
+              containerClass={'phone-input_container'}
+              buttonClass={'phone-input_button'}
+              inputClass={'phone-input'}
+              inputProps={{
+                name: 'phone',
+              }}
+            />
+            <fieldset className="contact">
+              <legend>Choose how to contact you:</legend>
+              <div>
+                <input type="radio" id="telegram" name="contact" />
+                <label htmlFor="telegram">Telegram</label>
+              </div>
+              <div>
+                <input type="radio" id="whatsapp" name="contact" />
+                <label htmlFor="whatsapp">Whatsapp</label>
+              </div>
+              <div>
+                <input type="radio" id="imessage" name="contact" />
+                <label htmlFor="imessage">iMessage</label>
+              </div>
+            </fieldset>
+            <div className="remember">
+              <input type="checkbox" id="remember" name="remember" />
+              <label htmlFor="remember">
+                Remember contacts in browser for repeat purchase
+              </label>
+            </div>
+            <div className="input_container">
+              <div className="label_container">
+                <label>Promo</label>
+              </div>
+              <input />
+            </div>
+            <div className="cart_sum">
+              <span>
+                Subtotal:{' '}
+                {productsList.reduce(
+                  (sum: number, item: ProductItemShort) =>
+                    parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                  0
+                )}
+                $
+              </span>
+            </div>
+            <div className="cart_sum">
+              <span>
+                Total:{' '}
+                {productsList.reduce(
+                  (sum: number, item: ProductItemShort) =>
+                    parseFloat(item.price.replace(/[^\d.-]/g, '')) + sum,
+                  0
+                )}
+                $
+              </span>
+            </div>
+            <button className="cart-button">Contact me</button>
           </div>
         </div>
       </div>
