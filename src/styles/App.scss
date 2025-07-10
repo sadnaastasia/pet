@@ -1192,9 +1192,10 @@ $greyhover: rgb(223, 223, 223);
       display: flex;
       justify-content: start;
       margin-bottom: 10px;
+      border-bottom: transparent 1px solid;
     }
     button:hover {
-      border-bottom: black 1px solid;
+      border-color: black;
       cursor: pointer;
     }
   }

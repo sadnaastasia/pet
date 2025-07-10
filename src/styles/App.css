@@ -1086,9 +1086,10 @@
   display: flex;
   justify-content: start;
   margin-bottom: 10px;
+  border-bottom: transparent 1px solid;
 }
 .footer_container .footer button:hover {
-  border-bottom: black 1px solid;
+  border-color: black;
   cursor: pointer;
 }
 
