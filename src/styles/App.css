@@ -1076,17 +1076,46 @@
 }
 
 .main-course-page_container {
-  margin: 20px;
   padding: 60px 150px;
-  border: #c776a8 1px solid;
-  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-weight: 300;
+}
+.main-course-page_container b {
+  font-weight: 700;
 }
 .main-course-page_container hr {
   border-color: #c776a8;
   width: 100%;
+}
+.main-course-page_container a {
+  text-decoration: none;
+  color: rgb(215, 176, 183);
+  border: none;
+}
+.main-course-page_container a:hover {
+  color: rgb(214, 144, 157);
+}
+.main-course-page_container .course-aims ul {
+  padding-left: 0;
+  list-style: decimal;
+}
+.main-course-page_container .course-aims ul li {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.main-course-page_container .course-aims ul li ul {
+  padding-left: 0;
+  list-style: circle;
+}
+.main-course-page_container .section-with-bullets ul {
+  padding-left: 0;
+  list-style: circle;
+}
+.main-course-page_container .section-with-bullets ul li {
+  margin-top: 10px;
+  margin-left: 30px;
 }
 .main-course-page_container .main-course-page_links {
   padding-left: 0;
@@ -1102,15 +1131,7 @@
   margin-right: 5px;
 }
 .main-course-page_container .main-course-page_links li {
-  margin-left: 30px;
-}
-.main-course-page_container .main-course-page_links li a {
-  text-decoration: none;
-  color: rgb(215, 176, 183);
-  border-bottom: transparent 1px solid;
-}
-.main-course-page_container .main-course-page_links li a:hover {
-  border-bottom: rgb(215, 176, 183) 2px solid;
+  margin-left: 20px;
 }
 
 .footer_container {
@@ -1302,7 +1323,6 @@
     grid-gap: 2rem;
   }
   .main-course-page_container {
-    margin: 20px;
     padding: 30px 50px;
   }
   .main-course-page_container .main-course-page_links li {
@@ -1501,6 +1521,20 @@
   }
   .about-course_container .about-course_content .content_item2 .image {
     bottom: -30px;
+  }
+  .main-course-page_container {
+    padding: 20px 20px;
+  }
+  .main-course-page_container .course-aims ul li {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  .main-course-page_container .section-with-bullets ul li {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  .main-course-page_container .main-course-page_links li {
+    margin-left: 15px;
   }
   .footer_container {
     background-color: #c776a8;

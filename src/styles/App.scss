@@ -1193,16 +1193,49 @@ $greyhover: rgb(223, 223, 223);
 }
 
 .main-course-page_container {
-  margin: 20px;
   padding: 60px 150px;
-  border: $pink 1px solid;
-  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-weight: 300;
+  b {
+    font-weight: 700;
+  }
   hr {
     border-color: $pink;
     width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(215, 176, 183);
+    border: none;
+  }
+  a:hover {
+    color: rgb(214, 144, 157);
+  }
+  .course-aims {
+    ul {
+      padding-left: 0;
+      list-style: decimal;
+      li {
+        margin-top: 10px;
+        margin-left: 30px;
+        ul {
+          padding-left: 0;
+          list-style: circle;
+        }
+      }
+    }
+  }
+  .section-with-bullets {
+    ul {
+      padding-left: 0;
+      list-style: circle;
+      li {
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+    }
   }
   .main-course-page_links {
     padding-left: 0;
@@ -1217,15 +1250,7 @@ $greyhover: rgb(223, 223, 223);
       margin-right: 5px;
     }
     li {
-      margin-left: 30px;
-      a {
-        text-decoration: none;
-        color: rgb(215, 176, 183);
-        border-bottom: transparent 1px solid;
-      }
-      a:hover {
-        border-bottom: rgb(215, 176, 183) 2px solid;
-      }
+      margin-left: 20px;
     }
   }
 }
@@ -1434,7 +1459,6 @@ $greyhover: rgb(223, 223, 223);
     grid-gap: 2rem;
   }
   .main-course-page_container {
-    margin: 20px;
     padding: 30px 50px;
     .main-course-page_links {
       li {
@@ -1656,6 +1680,30 @@ $greyhover: rgb(223, 223, 223);
         .image {
           bottom: -30px;
         }
+      }
+    }
+  }
+  .main-course-page_container {
+    padding: 20px 20px;
+    .course-aims {
+      ul {
+        li {
+          margin-top: 10px;
+          margin-left: 15px;
+        }
+      }
+    }
+    .section-with-bullets {
+      ul {
+        li {
+          margin-top: 10px;
+          margin-left: 15px;
+        }
+      }
+    }
+    .main-course-page_links {
+      li {
+        margin-left: 15px;
       }
     }
   }
